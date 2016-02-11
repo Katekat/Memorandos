@@ -1,0 +1,11 @@
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\Datos\bin\Debug\Datos.dll
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\Datos\bin\Debug\Datos.pdb
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\Datos\obj\Debug\Datos.dll
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\Datos\obj\Debug\Datos.pdb
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\Datos\bin\Debug\Datos.dll.config
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\bin\Debug\Datos.dll.config
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\bin\Debug\Datos.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\bin\Debug\Datos.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\obj\Debug\Datos.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\obj\Debug\Datos.pdb

@@ -1,0 +1,12 @@
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\ws\bin\ws.dll.config
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\ws\bin\ws.dll
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\ws\bin\ws.pdb
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\ws\obj\Debug\ws.dll
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\ws\obj\Debug\ws.pdb
+C:\Users\Katherine\documents\visual studio 2013\Projects\Uimemos\ws\obj\Debug\ws.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\ws\bin\ws.dll.config
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\ws\bin\ws.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\ws\bin\ws.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\ws\obj\Debug\ws.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\ws\obj\Debug\ws.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\ws\obj\Debug\ws.csprojResolveAssemblyReference.cache

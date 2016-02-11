@@ -1,0 +1,246 @@
+﻿namespace Uimemos
+{
+    partial class tecnico
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tecnico));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.paneltec = new System.Windows.Forms.Panel();
+            this.btnGuardartecnico = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolStrip1.SuspendLayout();
+            this.paneltec.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton5,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(984, 59);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(44, 56);
+            this.toolStripButton5.Text = "Home";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(69, 56);
+            this.toolStripButton1.Text = "Dispositivo";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(53, 56);
+            this.toolStripButton2.Text = "Técnico";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(55, 56);
+            this.toolStripButton3.Text = "Revisión";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(51, 56);
+            this.toolStripButton4.Text = "Memos";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // paneltec
+            // 
+            this.paneltec.BackColor = System.Drawing.Color.Transparent;
+            this.paneltec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneltec.Controls.Add(this.btnGuardartecnico);
+            this.paneltec.Controls.Add(this.txtNombre);
+            this.paneltec.Controls.Add(this.txtCargo);
+            this.paneltec.Controls.Add(this.txtCedula);
+            this.paneltec.Controls.Add(this.label4);
+            this.paneltec.Controls.Add(this.label3);
+            this.paneltec.Controls.Add(this.label2);
+            this.paneltec.Location = new System.Drawing.Point(205, 158);
+            this.paneltec.Name = "paneltec";
+            this.paneltec.Size = new System.Drawing.Size(603, 248);
+            this.paneltec.TabIndex = 2;
+            // 
+            // btnGuardartecnico
+            // 
+            this.btnGuardartecnico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnGuardartecnico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnGuardartecnico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardartecnico.Location = new System.Drawing.Point(120, 171);
+            this.btnGuardartecnico.Name = "btnGuardartecnico";
+            this.btnGuardartecnico.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardartecnico.TabIndex = 6;
+            this.btnGuardartecnico.Text = "Guardar";
+            this.btnGuardartecnico.UseVisualStyleBackColor = true;
+            this.btnGuardartecnico.Click += new System.EventHandler(this.btnGuardartecnico_Click);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(101, 83);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(118, 20);
+            this.txtNombre.TabIndex = 5;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.Location = new System.Drawing.Point(101, 115);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(118, 20);
+            this.txtCargo.TabIndex = 4;
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtCedula.Location = new System.Drawing.Point(101, 46);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(118, 20);
+            this.txtCedula.TabIndex = 3;
+            this.txtCedula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCedula_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Cargo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(41, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Cédula:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(224, 146);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Datos del técnico";
+            // 
+            // tecnico
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(984, 562);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.paneltec);
+            this.Controls.Add(this.toolStrip1);
+            this.Name = "tecnico";
+            this.Text = "Técnico";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.paneltec.ResumeLayout(false);
+            this.paneltec.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.Panel paneltec;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnGuardartecnico;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+    }
+}
