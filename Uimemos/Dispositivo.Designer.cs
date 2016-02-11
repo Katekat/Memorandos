@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Departamento = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.paneldispo.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.toolStripButton5,
             this.toolStripButton1,
             this.toolStripButton2,
+            this.Departamento,
             this.toolStripButton3,
             this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -258,6 +260,17 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Dispositivo";
             // 
+            // Departamento
+            // 
+            this.Departamento.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Departamento.Image = ((System.Drawing.Image)(resources.GetObject("Departamento.Image")));
+            this.Departamento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.Departamento.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Departamento.Name = "Departamento";
+            this.Departamento.Size = new System.Drawing.Size(60, 56);
+            this.Departamento.Text = "Departamento";
+            this.Departamento.Click += new System.EventHandler(this.Departamento_Click);
+            // 
             // Dispositivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +315,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton Departamento;
     }
 }
 

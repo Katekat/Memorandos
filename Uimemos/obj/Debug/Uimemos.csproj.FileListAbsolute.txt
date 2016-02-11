@@ -31,3 +31,18 @@ C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Uimemos\obj\Debug\U
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Uimemos\obj\Debug\Uimemos.Revision.resources
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Uimemos\obj\Debug\Uimemos.tecnico.resources
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\bin\Debug\Uimemos.exe
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\bin\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\bin\Debug\Datos.dll
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\bin\Debug\Datos.pdb
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.departamento.resources
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.Dispositivo.resources
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.Home.resources
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.Properties.Resources.resources
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.Revision.resources
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.tecnico.resources
+C:\Users\KateF\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache

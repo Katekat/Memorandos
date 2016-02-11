@@ -32,7 +32,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.Tecnico = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
@@ -55,7 +55,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton5,
             this.toolStripButton1,
-            this.toolStripButton2,
+            this.Tecnico,
             this.toolStripButton6,
             this.toolStripButton3,
             this.toolStripButton4});
@@ -83,14 +83,15 @@
             this.toolStripButton1.Text = "Dispositivo";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripButton2
+            // Tecnico
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(53, 56);
-            this.toolStripButton2.Text = "Técnico";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Tecnico.Image = ((System.Drawing.Image)(resources.GetObject("Tecnico.Image")));
+            this.Tecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Tecnico.Name = "Tecnico";
+            this.Tecnico.Size = new System.Drawing.Size(53, 56);
+            this.Tecnico.Text = "Técnico";
+            this.Tecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Tecnico.Click += new System.EventHandler(this.Tecnico_Click);
             // 
             // toolStripButton6
             // 
@@ -241,7 +242,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton Tecnico;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;

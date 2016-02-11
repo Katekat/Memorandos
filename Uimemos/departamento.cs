@@ -114,5 +114,16 @@ namespace Uimemos
             }
 
         }
+
+        private void Tecnico_Click(object sender, EventArgs e)
+        {
+            tecnico tec = new tecnico();
+            this.Hide();
+            tec.Show();
+        }
+
+        
+
+        
     }
 }

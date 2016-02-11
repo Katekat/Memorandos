@@ -9,3 +9,8 @@ C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\bin\Debug\Dat
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\bin\Debug\Datos.pdb
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\obj\Debug\Datos.dll
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\Uimemos\Datos\obj\Debug\Datos.pdb
+C:\Users\KateF\Source\Repos\Memorandos\Datos\bin\Debug\Datos.dll.config
+C:\Users\KateF\Source\Repos\Memorandos\Datos\bin\Debug\Datos.dll
+C:\Users\KateF\Source\Repos\Memorandos\Datos\bin\Debug\Datos.pdb
+C:\Users\KateF\Source\Repos\Memorandos\Datos\obj\Debug\Datos.dll
+C:\Users\KateF\Source\Repos\Memorandos\Datos\obj\Debug\Datos.pdb

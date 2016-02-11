@@ -64,6 +64,13 @@ namespace Uimemos
             
         }
 
+        private void Departamento_Click(object sender, EventArgs e)
+        {
+            departamento dpto = new departamento();
+            this.Hide();
+            dpto.Show();
+        }
+
         
 
        
