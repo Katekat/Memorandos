@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Revision));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
@@ -36,19 +37,19 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbnom3 = new System.Windows.Forms.ComboBox();
+            this.nomdpto = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cbnom2 = new System.Windows.Forms.ComboBox();
+            this.cbstatus = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.fechasalida = new System.Windows.Forms.DateTimePicker();
+            this.txtFechaen = new System.Windows.Forms.DateTimePicker();
+            this.cbnom1 = new System.Windows.Forms.ComboBox();
+            this.txtrecomendaciones = new System.Windows.Forms.TextBox();
+            this.txtdiagfinal = new System.Windows.Forms.TextBox();
+            this.txtdiagnini = new System.Windows.Forms.TextBox();
+            this.txtCodigocontrol = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,8 +64,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolDpto = new System.Windows.Forms.ToolStripButton();
+            this.panelfechayhora = new System.Windows.Forms.Panel();
+            this.hora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelfechayhora.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -112,19 +118,20 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox5);
+            this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.cbnom3);
+            this.panel1.Controls.Add(this.nomdpto);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.comboBox4);
+            this.panel1.Controls.Add(this.cbnom2);
+            this.panel1.Controls.Add(this.cbstatus);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.fechasalida);
+            this.panel1.Controls.Add(this.txtFechaen);
+            this.panel1.Controls.Add(this.cbnom1);
+            this.panel1.Controls.Add(this.txtrecomendaciones);
+            this.panel1.Controls.Add(this.txtdiagfinal);
+            this.panel1.Controls.Add(this.txtdiagnini);
+            this.panel1.Controls.Add(this.txtCodigocontrol);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.panel2);
@@ -140,78 +147,78 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // comboBox2
+            // cbnom3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox2, "comboBox2");
-            this.comboBox2.Name = "comboBox2";
+            this.cbnom3.FormattingEnabled = true;
+            resources.ApplyResources(this.cbnom3, "cbnom3");
+            this.cbnom3.Name = "cbnom3";
             // 
-            // comboBox5
+            // nomdpto
             // 
-            this.comboBox5.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox5, "comboBox5");
-            this.comboBox5.Name = "comboBox5";
+            this.nomdpto.FormattingEnabled = true;
+            resources.ApplyResources(this.nomdpto, "nomdpto");
+            this.nomdpto.Name = "nomdpto";
             // 
             // label14
             // 
             resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
             // 
-            // comboBox3
+            // cbnom2
             // 
-            this.comboBox3.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox3, "comboBox3");
-            this.comboBox3.Name = "comboBox3";
+            this.cbnom2.FormattingEnabled = true;
+            resources.ApplyResources(this.cbnom2, "cbnom2");
+            this.cbnom2.Name = "cbnom2";
             // 
-            // comboBox4
+            // cbstatus
             // 
-            this.comboBox4.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox4, "comboBox4");
-            this.comboBox4.Name = "comboBox4";
+            this.cbstatus.FormattingEnabled = true;
+            resources.ApplyResources(this.cbstatus, "cbstatus");
+            this.cbstatus.Name = "cbstatus";
             // 
             // label13
             // 
             resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
             // 
-            // dateTimePicker2
+            // fechasalida
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            resources.ApplyResources(this.dateTimePicker2, "dateTimePicker2");
-            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.fechasalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(this.fechasalida, "fechasalida");
+            this.fechasalida.Name = "fechasalida";
             // 
-            // dateTimePicker1
+            // txtFechaen
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.txtFechaen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(this.txtFechaen, "txtFechaen");
+            this.txtFechaen.Name = "txtFechaen";
             // 
-            // comboBox1
+            // cbnom1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
+            this.cbnom1.FormattingEnabled = true;
+            resources.ApplyResources(this.cbnom1, "cbnom1");
+            this.cbnom1.Name = "cbnom1";
             // 
-            // textBox6
+            // txtrecomendaciones
             // 
-            resources.ApplyResources(this.textBox6, "textBox6");
-            this.textBox6.Name = "textBox6";
+            resources.ApplyResources(this.txtrecomendaciones, "txtrecomendaciones");
+            this.txtrecomendaciones.Name = "txtrecomendaciones";
             // 
-            // textBox5
+            // txtdiagfinal
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.txtdiagfinal, "txtdiagfinal");
+            this.txtdiagfinal.Name = "txtdiagfinal";
             // 
-            // textBox3
+            // txtdiagnini
             // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
+            resources.ApplyResources(this.txtdiagnini, "txtdiagnini");
+            this.txtdiagnini.Name = "txtdiagnini";
             // 
-            // textBox1
+            // txtCodigocontrol
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            this.txtCodigocontrol.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            resources.ApplyResources(this.txtCodigocontrol, "txtCodigocontrol");
+            this.txtCodigocontrol.Name = "txtCodigocontrol";
             // 
             // label12
             // 
@@ -286,10 +293,36 @@
             this.toolDpto.Name = "toolDpto";
             this.toolDpto.Click += new System.EventHandler(this.toolDpto_Click);
             // 
+            // panelfechayhora
+            // 
+            resources.ApplyResources(this.panelfechayhora, "panelfechayhora");
+            this.panelfechayhora.BackColor = System.Drawing.Color.Transparent;
+            this.panelfechayhora.Controls.Add(this.hora);
+            this.panelfechayhora.Name = "panelfechayhora";
+            // 
+            // hora
+            // 
+            resources.ApplyResources(this.hora, "hora");
+            this.hora.Name = "hora";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            resources.ApplyResources(this.btnGuardar, "btnGuardar");
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            // 
             // Revision
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.panelfechayhora);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
@@ -298,6 +331,8 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelfechayhora.ResumeLayout(false);
+            this.panelfechayhora.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,17 +362,21 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.DateTimePicker fechasalida;
+        private System.Windows.Forms.DateTimePicker txtFechaen;
+        private System.Windows.Forms.ComboBox cbnom1;
+        private System.Windows.Forms.TextBox txtrecomendaciones;
+        private System.Windows.Forms.TextBox txtdiagfinal;
+        private System.Windows.Forms.TextBox txtdiagnini;
+        private System.Windows.Forms.TextBox txtCodigocontrol;
+        private System.Windows.Forms.ComboBox cbnom3;
+        private System.Windows.Forms.ComboBox cbnom2;
+        private System.Windows.Forms.ComboBox nomdpto;
+        private System.Windows.Forms.ComboBox cbstatus;
         private System.Windows.Forms.ToolStripButton toolDpto;
+        private System.Windows.Forms.Panel panelfechayhora;
+        private System.Windows.Forms.Label hora;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

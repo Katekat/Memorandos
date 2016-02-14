@@ -17,6 +17,7 @@ namespace Uimemos
         public tecnico()
         {
             InitializeComponent();
+            timer1.Enabled = true;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -125,6 +126,11 @@ namespace Uimemos
 
                 }
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            hora.Text = DateTime.Now.ToString();
         }
     }
 }

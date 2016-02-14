@@ -15,6 +15,7 @@ namespace Uimemos
         public Memos()
         {
             InitializeComponent();
+            timer1.Enabled = true;
         }
 
         private void toolRevision_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace Uimemos
             Home inicio = new Home();
             this.Hide();
             inicio.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            hora.Text = DateTime.Now.ToString();
         }
 
        

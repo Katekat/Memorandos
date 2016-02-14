@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memos));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolHome = new System.Windows.Forms.ToolStripButton();
@@ -37,7 +38,7 @@
             this.toolRevision = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -47,8 +48,12 @@
             this.txtdestinatario = new System.Windows.Forms.TextBox();
             this.lbDestinatario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelfechayhora = new System.Windows.Forms.Panel();
+            this.hora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelfechayhora.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -132,7 +137,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.txtDescripcion);
             this.panel1.Controls.Add(this.lbDescripcion);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -146,18 +151,17 @@
             this.panel1.Size = new System.Drawing.Size(883, 366);
             this.panel1.TabIndex = 2;
             // 
-            // button1
+            // btnGuardar
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(317, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Generar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Location = new System.Drawing.Point(317, 313);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.Text = "Generar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
             // txtDescripcion
             // 
@@ -241,12 +245,36 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Registro de memorando";
             // 
+            // panelfechayhora
+            // 
+            this.panelfechayhora.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelfechayhora.BackColor = System.Drawing.Color.Transparent;
+            this.panelfechayhora.Controls.Add(this.hora);
+            this.panelfechayhora.Location = new System.Drawing.Point(0, 62);
+            this.panelfechayhora.Name = "panelfechayhora";
+            this.panelfechayhora.Size = new System.Drawing.Size(984, 26);
+            this.panelfechayhora.TabIndex = 7;
+            // 
+            // hora
+            // 
+            this.hora.AutoSize = true;
+            this.hora.Location = new System.Drawing.Point(429, 5);
+            this.hora.Name = "hora";
+            this.hora.Size = new System.Drawing.Size(35, 13);
+            this.hora.TabIndex = 0;
+            this.hora.Text = "label6";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Memos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(984, 563);
+            this.Controls.Add(this.panelfechayhora);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
@@ -256,6 +284,8 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelfechayhora.ResumeLayout(false);
+            this.panelfechayhora.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,7 +301,7 @@
         private System.Windows.Forms.ToolStripButton toolRevision;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -281,5 +311,8 @@
         private System.Windows.Forms.TextBox txtdestinatario;
         private System.Windows.Forms.Label lbDestinatario;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelfechayhora;
+        private System.Windows.Forms.Label hora;
+        private System.Windows.Forms.Timer timer1;
     }
 }

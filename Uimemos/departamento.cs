@@ -15,6 +15,7 @@ namespace Uimemos
         public departamento()
         {
             InitializeComponent();
+            timer1.Enabled = true;
         }
 
         Datos.cDepartamento Dpto = new Datos.cDepartamento();
@@ -151,6 +152,11 @@ namespace Uimemos
             Memos memorandos = new Memos();
             this.Hide();
             memorandos.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            hora.Text = DateTime.Now.ToString();
         }
 
         

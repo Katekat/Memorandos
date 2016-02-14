@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
@@ -45,9 +46,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelfechayhora = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.hora = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelfechayhora.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -214,6 +219,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Realizado por:";
             // 
+            // panelfechayhora
+            // 
+            this.panelfechayhora.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelfechayhora.BackColor = System.Drawing.Color.Transparent;
+            this.panelfechayhora.Controls.Add(this.hora);
+            this.panelfechayhora.Location = new System.Drawing.Point(0, 62);
+            this.panelfechayhora.Name = "panelfechayhora";
+            this.panelfechayhora.Size = new System.Drawing.Size(984, 26);
+            this.panelfechayhora.TabIndex = 5;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // hora
+            // 
+            this.hora.AutoSize = true;
+            this.hora.Location = new System.Drawing.Point(432, 6);
+            this.hora.Name = "hora";
+            this.hora.Size = new System.Drawing.Size(35, 13);
+            this.hora.TabIndex = 0;
+            this.hora.Text = "label6";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +249,7 @@
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(984, 562);
+            this.Controls.Add(this.panelfechayhora);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -232,6 +261,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelfechayhora.ResumeLayout(false);
+            this.panelfechayhora.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +286,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.Panel panelfechayhora;
+        private System.Windows.Forms.Label hora;
+        private System.Windows.Forms.Timer timer1;
     }
 }

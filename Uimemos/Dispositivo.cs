@@ -18,8 +18,9 @@ namespace Uimemos
 
         public Dispositivo()
         {
-            InitializeComponent();
 
+            InitializeComponent();
+            timer1.Enabled = true;
         }
 
         //private void Dispositivo_Load(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace Uimemos
             Memos memorandos = new Memos();
             this.Hide();
             memorandos.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            hora.Text = DateTime.Now.ToString();
         }
 
         
