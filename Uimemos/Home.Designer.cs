@@ -35,7 +35,7 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.Itememorando = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,7 +59,7 @@
             this.toolStripButton2,
             this.toolStripButton6,
             this.toolStripButton3,
-            this.toolStripButton4});
+            this.Itememorando});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(984, 59);
@@ -117,14 +117,15 @@
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // toolStripButton4
+            // Itememorando
             // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(51, 56);
-            this.toolStripButton4.Text = "Memos";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Itememorando.Image = ((System.Drawing.Image)(resources.GetObject("Itememorando.Image")));
+            this.Itememorando.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Itememorando.Name = "Itememorando";
+            this.Itememorando.Size = new System.Drawing.Size(51, 56);
+            this.Itememorando.Text = "Memos";
+            this.Itememorando.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Itememorando.Click += new System.EventHandler(this.Itememorando_Click);
             // 
             // panel1
             // 
@@ -243,7 +244,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton Itememorando;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;

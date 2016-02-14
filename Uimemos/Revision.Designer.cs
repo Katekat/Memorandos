@@ -62,6 +62,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolDpto = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             this.toolStripButton5,
             this.toolStripButton1,
             this.toolStripButton2,
+            this.toolDpto,
             this.toolStripButton3,
             this.toolStripButton4});
             this.toolStrip1.Name = "toolStrip1";
@@ -104,6 +106,7 @@
             // 
             resources.ApplyResources(this.toolStripButton4, "toolStripButton4");
             this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // panel1
             // 
@@ -277,6 +280,12 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Name = "label2";
             // 
+            // toolDpto
+            // 
+            resources.ApplyResources(this.toolDpto, "toolDpto");
+            this.toolDpto.Name = "toolDpto";
+            this.toolDpto.Click += new System.EventHandler(this.toolDpto_Click);
+            // 
             // Revision
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -329,5 +338,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ToolStripButton toolDpto;
     }
 }

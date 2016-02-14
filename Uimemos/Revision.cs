@@ -37,5 +37,19 @@ namespace Uimemos
             this.Hide();
             tec.Show();
         }
+
+        private void toolDpto_Click(object sender, EventArgs e)
+        {
+            departamento dpto = new departamento();
+            this.Hide();
+            dpto.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            Memos memorando= new Memos();
+            this.Hide();
+            memorando.Show();
+        }
     }
 }

@@ -22,15 +22,15 @@ namespace Uimemos
 
         }
 
-        private void Dispositivo_Load(object sender, EventArgs e)
-        {
-            dispo.mostrarNombredp();
-            var list = dispo.mostrarNombredp();
-            cbnomdpto.DataSource = list;
-            cbnomdpto.DisplayMember = "nombre";
-            cbnomdpto.ValueMember = "codigodpto";
+        //private void Dispositivo_Load(object sender, EventArgs e)
+        //{
+        //    dispo.mostrarNombredp();
+        //    var list = dispo.mostrarNombredp();
+        //    cbnomdpto.DataSource = list;
+        //    cbnomdpto.DisplayMember = "nombre";
+        //    cbnomdpto.ValueMember = "codigodpto";
             
-        }
+        //}
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
 
@@ -70,6 +70,15 @@ namespace Uimemos
             this.Hide();
             dpto.Show();
         }
+
+        private void toolmemorando_Click(object sender, EventArgs e)
+        {
+            Memos memorandos = new Memos();
+            this.Hide();
+            memorandos.Show();
+        }
+
+        
 
         
 

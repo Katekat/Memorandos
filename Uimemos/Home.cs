@@ -46,6 +46,13 @@ namespace Uimemos
             dpto.Show();
         }
 
+        private void Itememorando_Click(object sender, EventArgs e)
+        {
+            Memos memorandos = new Memos();
+            this.Hide();
+            memorandos.Show();
+        }
+
        
      
         

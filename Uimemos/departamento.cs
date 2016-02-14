@@ -115,12 +115,47 @@ namespace Uimemos
 
         }
 
-        private void Tecnico_Click(object sender, EventArgs e)
+        
+
+        private void toolHome_Click(object sender, EventArgs e)
+        {
+            Home inicio = new Home();
+            this.Hide();
+            inicio.Show();
+        }
+
+        private void toolDispositivo_Click(object sender, EventArgs e)
+        {
+            Dispositivo dispo = new Dispositivo();
+            this.Hide();
+            dispo.Show();
+        }
+
+        private void toolTecnico_Click(object sender, EventArgs e)
         {
             tecnico tec = new tecnico();
             this.Hide();
             tec.Show();
+
         }
+
+        private void toolRevision_Click(object sender, EventArgs e)
+        {
+            Revision revisar = new Revision();
+            this.Hide();
+            revisar.Show();
+        }
+
+        private void toolMemos_Click(object sender, EventArgs e)
+        {
+            Memos memorandos = new Memos();
+            this.Hide();
+            memorandos.Show();
+        }
+
+        
+
+        
 
         
 
