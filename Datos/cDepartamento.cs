@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Datos
-{
+{//hey
    public class cDepartamento
     {
        public int  codigo ;
