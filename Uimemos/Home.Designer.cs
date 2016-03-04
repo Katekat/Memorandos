@@ -47,8 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelfechayhora = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.hora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -229,10 +229,6 @@
             this.panelfechayhora.Size = new System.Drawing.Size(984, 26);
             this.panelfechayhora.TabIndex = 5;
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // hora
             // 
             this.hora.AutoSize = true;
@@ -241,6 +237,10 @@
             this.hora.Size = new System.Drawing.Size(35, 13);
             this.hora.TabIndex = 0;
             this.hora.Text = "label6";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Home
             // 
@@ -255,6 +255,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
