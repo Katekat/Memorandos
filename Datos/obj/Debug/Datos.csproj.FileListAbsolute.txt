@@ -14,3 +14,9 @@ C:\Users\KateF\Source\Repos\Memorandos\Datos\bin\Debug\Datos.dll
 C:\Users\KateF\Source\Repos\Memorandos\Datos\bin\Debug\Datos.pdb
 C:\Users\KateF\Source\Repos\Memorandos\Datos\obj\Debug\Datos.dll
 C:\Users\KateF\Source\Repos\Memorandos\Datos\obj\Debug\Datos.pdb
+C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\bin\Debug\Datos.dll.config
+C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\bin\Debug\Datos.dll
+C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\bin\Debug\Datos.pdb
+C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\obj\Debug\Datos.dll
+C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\obj\Debug\Datos.pdb

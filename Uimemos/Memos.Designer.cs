@@ -279,6 +279,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Memos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memos";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

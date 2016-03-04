@@ -34,9 +34,11 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolDpto = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.cbnom3 = new System.Windows.Forms.ComboBox();
             this.nomdpto = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -63,11 +65,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.toolDpto = new System.Windows.Forms.ToolStripButton();
             this.panelfechayhora = new System.Windows.Forms.Panel();
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelfechayhora.SuspendLayout();
@@ -102,6 +102,12 @@
             resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolDpto
+            // 
+            resources.ApplyResources(this.toolDpto, "toolDpto");
+            this.toolDpto.Name = "toolDpto";
+            this.toolDpto.Click += new System.EventHandler(this.toolDpto_Click);
             // 
             // toolStripButton3
             // 
@@ -146,6 +152,15 @@
             this.panel1.Controls.Add(this.label1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            resources.ApplyResources(this.btnGuardar, "btnGuardar");
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // cbnom3
             // 
@@ -287,12 +302,6 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Name = "label2";
             // 
-            // toolDpto
-            // 
-            resources.ApplyResources(this.toolDpto, "toolDpto");
-            this.toolDpto.Name = "toolDpto";
-            this.toolDpto.Click += new System.EventHandler(this.toolDpto_Click);
-            // 
             // panelfechayhora
             // 
             resources.ApplyResources(this.panelfechayhora, "panelfechayhora");
@@ -308,15 +317,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            resources.ApplyResources(this.btnGuardar, "btnGuardar");
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
             // Revision
             // 

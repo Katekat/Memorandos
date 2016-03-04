@@ -312,6 +312,7 @@
             this.Controls.Add(this.paneldispo);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Dispositivo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dispositivo";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

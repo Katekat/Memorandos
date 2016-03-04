@@ -259,6 +259,7 @@
             this.Controls.Add(this.panelDpto);
             this.Controls.Add(this.toolStrip1);
             this.Name = "departamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "departamento";
             this.Load += new System.EventHandler(this.departamento_Load);
             this.toolStrip1.ResumeLayout(false);
