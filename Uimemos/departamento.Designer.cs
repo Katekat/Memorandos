@@ -168,6 +168,7 @@
             this.txtEncdpto.Name = "txtEncdpto";
             this.txtEncdpto.Size = new System.Drawing.Size(124, 20);
             this.txtEncdpto.TabIndex = 5;
+            this.txtEncdpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEncdpto_KeyPress);
             // 
             // txtNomdpto
             // 
@@ -175,6 +176,7 @@
             this.txtNomdpto.Name = "txtNomdpto";
             this.txtNomdpto.Size = new System.Drawing.Size(124, 20);
             this.txtNomdpto.TabIndex = 4;
+            this.txtNomdpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomdpto_KeyPress);
             // 
             // txtCodigodpto
             // 
@@ -183,6 +185,7 @@
             this.txtCodigodpto.Size = new System.Drawing.Size(124, 20);
             this.txtCodigodpto.TabIndex = 3;
             this.txtCodigodpto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigodpto_KeyDown);
+            this.txtCodigodpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigodpto_KeyPress);
             // 
             // label4
             // 
