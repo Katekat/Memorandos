@@ -151,6 +151,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(118, 20);
             this.txtNombre.TabIndex = 5;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCargo
             // 
@@ -158,6 +159,7 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(118, 20);
             this.txtCargo.TabIndex = 4;
+            this.txtCargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargo_KeyPress);
             // 
             // txtCedula
             // 
@@ -167,6 +169,7 @@
             this.txtCedula.Size = new System.Drawing.Size(118, 20);
             this.txtCedula.TabIndex = 3;
             this.txtCedula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCedula_KeyDown);
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // label4
             // 
