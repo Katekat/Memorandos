@@ -88,7 +88,6 @@
             // toolDispositivo
             // 
             this.toolDispositivo.Image = ((System.Drawing.Image)(resources.GetObject("toolDispositivo.Image")));
-            this.toolDispositivo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolDispositivo.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.toolDispositivo.Name = "toolDispositivo";
             this.toolDispositivo.Size = new System.Drawing.Size(69, 56);
@@ -108,13 +107,12 @@
             // 
             // toolDepartamento
             // 
-            this.toolDepartamento.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolDepartamento.Image = ((System.Drawing.Image)(resources.GetObject("toolDepartamento.Image")));
-            this.toolDepartamento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolDepartamento.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolDepartamento.Name = "toolDepartamento";
-            this.toolDepartamento.Size = new System.Drawing.Size(60, 56);
+            this.toolDepartamento.Size = new System.Drawing.Size(87, 56);
             this.toolDepartamento.Text = "Departamento";
+            this.toolDepartamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolDepartamento.Click += new System.EventHandler(this.Departamento_Click);
             // 
             // toolrevision
