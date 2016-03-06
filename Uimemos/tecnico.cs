@@ -101,7 +101,7 @@ namespace Uimemos
                 if (tec.cedula.Equals(txtCedula.Text))
                 {
                     MessageBox.Show(" La persona ya esta registrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    limpiar();
                 }
                 else { 
                     tec.cedula = txtCedula.Text;
