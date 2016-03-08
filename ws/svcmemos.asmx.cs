@@ -37,7 +37,7 @@ namespace ws
         {
             
                 SqlConnection cnnConexion = ObtenerConexion();
-                string strSentenciaSQL = "select nombre from departamento ";
+                string strSentenciaSQL = "select codigodpto, nombre from departamento ";
 
                 SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
 
