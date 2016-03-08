@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,7 @@ namespace Uimemos
     public partial class Dispositivo : Form
     {
         Datos.cDispositivo dispo = new Datos.cDispositivo();
-
-        
+       
 
         public Dispositivo()
         {
@@ -23,15 +23,8 @@ namespace Uimemos
             timer1.Enabled = true;
         }
 
-        //private void Dispositivo_Load(object sender, EventArgs e)
-        //{
-        //    dispo.mostrarNombredp();
-        //    var list = dispo.mostrarNombredp();
-        //    cbnomdpto.DataSource = list;
-        //    cbnomdpto.DisplayMember = "nombre";
-        //    cbnomdpto.ValueMember = "codigodpto";
-            
-        //}
+
+
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
 
@@ -42,7 +35,7 @@ namespace Uimemos
             tecnico abrir = new tecnico();
             this.Hide();
             abrir.Show();
-            
+
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -59,10 +52,10 @@ namespace Uimemos
             revisar.Show();
         }
 
-        
+
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Departamento_Click(object sender, EventArgs e)
@@ -84,16 +77,48 @@ namespace Uimemos
             hora.Text = DateTime.Now.ToString();
         }
 
-        
+        private void Dispositivo_Load(object sender, EventArgs e)
+        {
+            cbnomdpto.DataSource = dispo.mostrarNombredp();
+            cbnomdpto.DisplayMember = "nombre";
+            cbnomdpto.ValueMember = "codigodpto";
+            cbnomdpto.SelectedIndex = 0;
 
-        
 
-       
+            List<citem> lista = new List<citem>();
 
-        
+            lista.Add(new citem("Case"));
+            lista.Add(new citem("Teclado"));
+            lista.Add(new citem("Mouse"));
+            lista.Add(new citem("Impresora"));
+            lista.Add(new citem("Fax"));
+            
+            
+            cbTipo.DisplayMember = "Name";
+            cbTipo.DataSource = lista;
+            //cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
+            //this.cbTipo.SelectedIndexChanged += new System.EventHandler(cbTipo_SelectedIndexChanged);
+            dispo.tipo = cbTipo.Text;
+            dispo.coddpto = int.Parse(cbTipo.Text);
+            dispo.caracteristicas = txtCaracteristicas.Text;
+            dispo.codigoControl = int.Parse(txtCodigocontrol.Text);
+            dispo.usuario = txtNomuser.Text;
+        }
 
-       
 
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

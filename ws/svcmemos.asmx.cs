@@ -35,6 +35,7 @@ namespace ws
         [WebMethod]
         public DataTable CargarItems()
         {
+                DataTable dt = new DataTable();
             
                 SqlConnection cnnConexion = ObtenerConexion();
                 string strSentenciaSQL = "select codigodpto, nombre from departamento ";
@@ -43,11 +44,12 @@ namespace ws
 
                 SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
 
-                DataTable dt = new DataTable();
+                
 
                 adpAdapter.Fill(dt);
 
                 cnnConexion.Close();
+                dt.TableName = "Lisdptos";
                 return dt;
             
         }

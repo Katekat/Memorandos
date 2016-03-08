@@ -11,10 +11,15 @@ using System.Data;
 namespace Datos
 {
     public class cDispositivo{
+        public string tipo;
+        public int codigoControl;
+        public string caracteristicas;
+        public string usuario;
+        public int coddpto;
 
         Rsvcmemos.svcmemos servicio = new Rsvcmemos.svcmemos();
 
-        public DataTable mostrarNombredp()
+       public DataTable  mostrarNombredp()
         {
             return servicio.CargarItems();
         }
