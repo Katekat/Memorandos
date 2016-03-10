@@ -27,7 +27,7 @@ namespace ws
 
         private static SqlConnection ObtenerConexion()
         {
-            SqlConnection cnnConexion = new SqlConnection("Server=KATHERINE; Database=computacion;Trusted_Connection=True;");
+            SqlConnection cnnConexion = new SqlConnection("Server=SANDRA-PC; Database=memorandos;Trusted_Connection=True;");
             cnnConexion.Open();
             return cnnConexion;
         }
