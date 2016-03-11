@@ -63,3 +63,19 @@ C:\Users\katherine.florez\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.Prop
 C:\Users\katherine.florez\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.Revision.resources
 C:\Users\katherine.florez\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.tecnico.resources
 C:\Users\katherine.florez\Source\Repos\Memorandos\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\bin\Debug\Uimemos.exe
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\bin\Debug\Uimemos.pdb
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\bin\Debug\Datos.dll
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\bin\Debug\Datos.pdb
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.departamento.resources
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.Dispositivo.resources
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.Home.resources
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.Memos.resources
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.Properties.Resources.resources
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.Revision.resources
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.tecnico.resources
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache

@@ -16,3 +16,8 @@ C:\Users\KateF\Source\Repos\Memorandos\ws\bin\ws.pdb
 C:\Users\KateF\Source\Repos\Memorandos\ws\obj\Debug\ws.dll
 C:\Users\KateF\Source\Repos\Memorandos\ws\obj\Debug\ws.pdb
 C:\Users\KateF\Source\Repos\Memorandos\ws\obj\Debug\ws.csprojResolveAssemblyReference.cache
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\bin\ws.dll.config
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\bin\ws.dll
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\bin\ws.pdb
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\obj\Debug\ws.dll
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\obj\Debug\ws.pdb

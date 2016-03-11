@@ -74,6 +74,27 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="BuscarDispositivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCodigo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarDispositivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarDispositivoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="BuscarDpto">
         <s:complexType>
           <s:sequence>
@@ -151,6 +172,12 @@
   <wsdl:message name="BuscarTecnicoSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarTecnicoResponse" />
   </wsdl:message>
+  <wsdl:message name="BuscarDispositivoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarDispositivo" />
+  </wsdl:message>
+  <wsdl:message name="BuscarDispositivoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarDispositivoResponse" />
+  </wsdl:message>
   <wsdl:message name="BuscarDptoSoapIn">
     <wsdl:part name="parameters" element="tns:BuscarDpto" />
   </wsdl:message>
@@ -189,6 +216,10 @@
     <wsdl:operation name="BuscarTecnico">
       <wsdl:input message="tns:BuscarTecnicoSoapIn" />
       <wsdl:output message="tns:BuscarTecnicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDispositivo">
+      <wsdl:input message="tns:BuscarDispositivoSoapIn" />
+      <wsdl:output message="tns:BuscarDispositivoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="BuscarDpto">
       <wsdl:input message="tns:BuscarDptoSoapIn" />
@@ -243,6 +274,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarTecnico">
       <soap:operation soapAction="http://tempuri.org/BuscarTecnico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDispositivo">
+      <soap:operation soapAction="http://tempuri.org/BuscarDispositivo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -318,6 +358,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarTecnico">
       <soap12:operation soapAction="http://tempuri.org/BuscarTecnico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDispositivo">
+      <soap12:operation soapAction="http://tempuri.org/BuscarDispositivo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

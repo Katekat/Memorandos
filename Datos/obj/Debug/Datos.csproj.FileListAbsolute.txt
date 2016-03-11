@@ -20,3 +20,8 @@ C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\bin\Debug\Datos.pdb
 C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\obj\Debug\Datos.dll
 C:\Users\katherine.florez\Source\Repos\Memorandos\Datos\obj\Debug\Datos.pdb
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Datos\obj\Debug\Datos.dll
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Datos\bin\Debug\Datos.dll.config
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Datos\bin\Debug\Datos.dll
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Datos\bin\Debug\Datos.pdb
+C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Datos\obj\Debug\Datos.pdb

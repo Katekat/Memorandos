@@ -23,21 +23,15 @@ namespace Uimemos
             timer1.Enabled = true;
         }
 
-
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
+// SECCION DE VENTANAS 
+        //INICIO
+      private void toolStripButton2_Click(object sender, EventArgs e)
         {
             tecnico abrir = new tecnico();
             this.Hide();
             abrir.Show();
 
         }
-
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             Home home = new Home();
@@ -51,31 +45,29 @@ namespace Uimemos
             this.Hide();
             revisar.Show();
         }
-
-
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
 
         }
-
         private void Departamento_Click(object sender, EventArgs e)
         {
             departamento dpto = new departamento();
             this.Hide();
             dpto.Show();
         }
-
         private void toolmemorando_Click(object sender, EventArgs e)
         {
             Memos memorandos = new Memos();
             this.Hide();
             memorandos.Show();
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             hora.Text = DateTime.Now.ToString();
         }
+        //FIN DE la sección  Ventana
+
+        
 
         private void Dispositivo_Load(object sender, EventArgs e)
         {
@@ -105,10 +97,48 @@ namespace Uimemos
             dispo.usuario = txtNomuser.Text;
         }
 
+        /// BUSCAR DISPOSITIVO 
+        private void txtCodigocontrol_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                dispo = dispo.BuscarDispositivo(int.Parse(txtCodigocontrol.Text));
 
 
+                if (dispo.codigoControl.ToString() != null)
+                {
+                    txtCodigocontrol.Text = dispo.codigoControl.ToString();
+                    txtCaracteristicas.Text = dispo.caracteristicas;
+                    txtNomuser.Text = dispo.usuario;
+                    cbTipo.Text = dispo.tipo;
+                    cbnomdpto.Text = dispo.Nomdpto;
+                    txtCodigocontrol.ReadOnly = Enabled;
 
+                }
+                if (dispo.codigoControl == 0)
+                {
+                    txtCodigocontrol.Clear();
+                    txtCodigocontrol.ReadOnly = false;
+                    MessageBox.Show("DISPOSITIVO NO REGISTRADO", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
+            }
+        }
+
+        public void limpiar()
+        {
+            foreach (Control ctrl in this.paneldispo.Controls)
+            {
+                if (ctrl is TextBox)
+                {
+                    ctrl.Text = String.Empty;
+
+                }
+            }
+        }
+
+            
 
 
 

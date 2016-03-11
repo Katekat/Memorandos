@@ -27,7 +27,7 @@ namespace ws
 
         private static SqlConnection ObtenerConexion()
         {
-            SqlConnection cnnConexion = new SqlConnection("Server=SANDRA-PC; Database=memorandos;Trusted_Connection=True;");
+            SqlConnection cnnConexion = new SqlConnection("Server=KATHERINE; Database=computacion;Trusted_Connection=True;");
             cnnConexion.Open();
             return cnnConexion;
         }
@@ -84,8 +84,8 @@ namespace ws
 
         [WebMethod]
         /*
-         Verifica si la cedula de un cliente ya existe en la base de datos
-         * por ende se tiene como parámetro el número de cédula del cliente 
+         Verifica si la cedula de unA Persona ya existe en la base de datos
+         * por ende se tiene como parámetro el número de cédula del tecnico 
          * @Autor Katherine Florez
          */
         public DataSet BuscarTecnico(string pCedula)
@@ -95,6 +95,31 @@ namespace ws
 
             string strSentenciaSQL = "select * from persona where cedula='{0}' ";
             strSentenciaSQL = string.Format(strSentenciaSQL, pCedula);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+
+
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
+        //BUSCAR DISPOSITIVO 
+        [WebMethod]
+        public DataSet BuscarDispositivo(int pCodigo)
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "select * from dispositivo where codigoContro='{0}' ";
+            strSentenciaSQL = string.Format(strSentenciaSQL, pCodigo);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
 

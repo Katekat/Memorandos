@@ -93,7 +93,6 @@
             this.toolDispositivo.Size = new System.Drawing.Size(69, 56);
             this.toolDispositivo.Text = "Dispositivo";
             this.toolDispositivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolDispositivo.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tooltecnico
             // 
@@ -205,6 +204,7 @@
             this.txtCodigocontrol.Name = "txtCodigocontrol";
             this.txtCodigocontrol.Size = new System.Drawing.Size(148, 20);
             this.txtCodigocontrol.TabIndex = 6;
+            this.txtCodigocontrol.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigocontrol_KeyDown);
             // 
             // label6
             // 
