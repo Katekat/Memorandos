@@ -165,7 +165,6 @@
             this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
             this.BtnGuardar.TabIndex = 11;
             this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // txtCaracteristicas
             // 
@@ -282,7 +281,7 @@
             this.panelfechayhora.Controls.Add(this.hora);
             this.panelfechayhora.Location = new System.Drawing.Point(0, 62);
             this.panelfechayhora.Name = "panelfechayhora";
-            this.panelfechayhora.Size = new System.Drawing.Size(984, 26);
+            this.panelfechayhora.Size = new System.Drawing.Size(984, 29);
             this.panelfechayhora.TabIndex = 7;
             // 
             // hora

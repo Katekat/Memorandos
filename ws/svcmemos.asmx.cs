@@ -118,7 +118,7 @@ namespace ws
 
             SqlConnection cnnConexion = ObtenerConexion();
 
-            string strSentenciaSQL = "select * from dispositivo where codigoContro='{0}' ";
+            string strSentenciaSQL = "select * from dispositivo where codigoControl='{0}' ";
             strSentenciaSQL = string.Format(strSentenciaSQL, pCodigo);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);

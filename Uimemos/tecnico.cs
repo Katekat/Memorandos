@@ -87,11 +87,27 @@ namespace Uimemos
                      DialogResult result=  MessageBox.Show("¿Desea Cambiar los datos del técnico?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                      if (result == DialogResult.Yes)
                      {
-                         tec.cargo = txtCargo.Text;
-                         tec.nombre = txtNombre.Text;
-                         MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                         txtCedula.ReadOnly = false;
-                         limpiar();
+                            if(validar()==false){
+                        
+
+                                 tec.cargo = txtCargo.Text;
+                                 tec.nombre = txtNombre.Text;
+                                tec.actualizarTecnico(tec);
+                                 MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                 txtCedula.ReadOnly = false;
+                                 limpiar();
+                            }
+                             else
+                            {
+                             MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                         }
+                         
+                     }
+                     else
+                     {
+                         txtNombre.Text = tec.nombre;
+                         txtCargo.Text = tec.cargo;
 
                      }
             }
@@ -101,7 +117,9 @@ namespace Uimemos
                 if (tec.cedula.Equals(txtCedula.Text))
                 {
                     MessageBox.Show(" La persona ya esta registrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
                     limpiar();
+                    txtCedula.ReadOnly = false;
                 }
                 else { 
                     tec.cedula = txtCedula.Text;
@@ -163,8 +181,16 @@ namespace Uimemos
             }
         }
 
-        
-
-        
+        public bool validar()
+        {  
+            foreach (Control c in this.paneltec.Controls)
+            {
+                if (c is TextBox & c.Text == String.Empty)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

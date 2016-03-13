@@ -14,13 +14,46 @@ namespace Uimemos
     public partial class Dispositivo : Form
     {
         Datos.cDispositivo dispo = new Datos.cDispositivo();
-       
+
+
+        private void Dispositivo_Load(object sender, EventArgs e)
+        {
+            cbnomdpto.DataSource = dispo.mostrarNombredp();
+            cbnomdpto.DisplayMember = "nombre";
+            cbnomdpto.ValueMember = "codigodpto";
+            cbnomdpto.SelectedIndex = 0;
+
+
+            List<citem> lista = new List<citem>();
+
+            lista.Add(new citem("Case"));
+            lista.Add(new citem("Teclado"));
+            lista.Add(new citem("Mouse"));
+            lista.Add(new citem("Impresora"));
+            lista.Add(new citem("Fax"));
+
+
+            cbTipo.DisplayMember = "Name";
+            cbTipo.DataSource = lista;
+            //cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
+            //this.cbTipo.SelectedIndexChanged += new System.EventHandler(cbTipo_SelectedIndexChanged);
+            //dispo.tipo = cbTipo.Text;
+            //dispo.coddpto = int.Parse(cbTipo.Text);
+            //dispo.caracteristicas = txtCaracteristicas.Text;
+            //dispo.codigoControl = int.Parse(txtCodigocontrol.Text);
+            //dispo.usuario = txtNomuser.Text;
+        }
+
 
         public Dispositivo()
         {
 
             InitializeComponent();
             timer1.Enabled = true;
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            hora.Text = DateTime.Now.ToString();
         }
 
 // SECCION DE VENTANAS 
@@ -45,10 +78,6 @@ namespace Uimemos
             this.Hide();
             revisar.Show();
         }
-        private void BtnGuardar_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Departamento_Click(object sender, EventArgs e)
         {
             departamento dpto = new departamento();
@@ -61,43 +90,12 @@ namespace Uimemos
             this.Hide();
             memorandos.Show();
         }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            hora.Text = DateTime.Now.ToString();
-        }
+        
         //FIN DE la sección  Ventana
 
         
 
-        private void Dispositivo_Load(object sender, EventArgs e)
-        {
-            cbnomdpto.DataSource = dispo.mostrarNombredp();
-            cbnomdpto.DisplayMember = "nombre";
-            cbnomdpto.ValueMember = "codigodpto";
-            cbnomdpto.SelectedIndex = 0;
-
-
-            List<citem> lista = new List<citem>();
-
-            lista.Add(new citem("Case"));
-            lista.Add(new citem("Teclado"));
-            lista.Add(new citem("Mouse"));
-            lista.Add(new citem("Impresora"));
-            lista.Add(new citem("Fax"));
-            
-            
-            cbTipo.DisplayMember = "Name";
-            cbTipo.DataSource = lista;
-            //cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
-            //this.cbTipo.SelectedIndexChanged += new System.EventHandler(cbTipo_SelectedIndexChanged);
-            dispo.tipo = cbTipo.Text;
-            dispo.coddpto = int.Parse(cbTipo.Text);
-            dispo.caracteristicas = txtCaracteristicas.Text;
-            dispo.codigoControl = int.Parse(txtCodigocontrol.Text);
-            dispo.usuario = txtNomuser.Text;
-        }
-
-        /// BUSCAR DISPOSITIVO 
+                /// BUSCAR DISPOSITIVO 
         private void txtCodigocontrol_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -108,13 +106,8 @@ namespace Uimemos
 
                 if (dispo.codigoControl.ToString() != null)
                 {
-                    txtCodigocontrol.Text = dispo.codigoControl.ToString();
-                    txtCaracteristicas.Text = dispo.caracteristicas;
-                    txtNomuser.Text = dispo.usuario;
-                    cbTipo.Text = dispo.tipo;
-                    cbnomdpto.Text = dispo.Nomdpto;
-                    txtCodigocontrol.ReadOnly = Enabled;
 
+                    MessageBox.Show("DISPOSITIVO YA EXISTE", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 if (dispo.codigoControl == 0)
                 {
@@ -138,9 +131,7 @@ namespace Uimemos
             }
         }
 
-            
-
-
+       
 
 
 

@@ -21,3 +21,15 @@ C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\bin\ws.
 C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\bin\ws.pdb
 C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\obj\Debug\ws.dll
 C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\ws\obj\Debug\ws.pdb
+C:\Users\KateF\Source\Repos\Memorandos3\ws\bin\ws.dll.config
+C:\Users\KateF\Source\Repos\Memorandos3\ws\bin\ws.dll
+C:\Users\KateF\Source\Repos\Memorandos3\ws\bin\ws.pdb
+C:\Users\KateF\Source\Repos\Memorandos3\ws\obj\Debug\ws.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Source\Repos\Memorandos3\ws\obj\Debug\ws.dll
+C:\Users\KateF\Source\Repos\Memorandos3\ws\obj\Debug\ws.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\bin\ws.dll.config
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\bin\ws.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\bin\ws.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\obj\Debug\ws.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\obj\Debug\ws.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\obj\Debug\ws.pdb

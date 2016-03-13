@@ -79,3 +79,67 @@ C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\ob
 C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.tecnico.resources
 C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
 C:\Users\katherine.florez\Documents\Visual Studio 2013\Projects\memos\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\bin\Debug\Uimemos.exe
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\bin\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\bin\Debug\Datos.dll
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\bin\Debug\Datos.pdb
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.departamento.resources
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.Dispositivo.resources
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.Home.resources
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.Memos.resources
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.Properties.Resources.resources
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.Revision.resources
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.tecnico.resources
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\bin\Debug\Uimemos.exe
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\bin\Debug\Uimemos.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\bin\Debug\Datos.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\bin\Debug\Datos.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.departamento.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.Dispositivo.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.Home.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.Memos.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.Properties.Resources.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.Revision.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.tecnico.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\Memorandos3\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\bin\Debug\Uimemos.exe
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\bin\Debug\Uimemos.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\bin\Debug\Datos.dll
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\bin\Debug\Datos.pdb
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.departamento.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.Dispositivo.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.Home.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.Memos.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.Properties.Resources.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.Revision.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.tecnico.resources
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\bin\Debug\Uimemos.exe
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\bin\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\bin\Debug\Datos.dll
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\bin\Debug\Datos.pdb
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.departamento.resources
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.Dispositivo.resources
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.Home.resources
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.Memos.resources
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.Properties.Resources.resources
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.Revision.resources
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.tecnico.resources
+C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
