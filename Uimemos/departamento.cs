@@ -46,6 +46,7 @@ namespace Uimemos
                     txtCodigodpto.Clear();
                     txtCodigodpto.ReadOnly = false;
                     MessageBox.Show("DEPARTAMENTO/DIVISIÓ/OFICINA NO REGISTRADO", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
 
             }
@@ -54,7 +55,7 @@ namespace Uimemos
 
         public bool validarDpto()
         {
-            if (txtNomdpto.Text != Dpto.nombre || txtEncdpto.Text != Dpto.encargado)
+            if ((int.Parse(txtCodigodpto.Text)!= Dpto.codigo))
             {
                 return true;
             }
@@ -63,35 +64,13 @@ namespace Uimemos
                 return false;
             }
         }
+        
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
             if (validarDpto() == true)
             {
-                DialogResult resul = MessageBox.Show("¿Desea Cambiar los datos del departamento/división/oficina ?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(resul == DialogResult.Yes)
-                {
-                    Dpto.nombre = txtNomdpto.Text;
-                    Dpto.encargado = txtEncdpto.Text;
-                    Dpto.ActualizarDpto(Dpto);
-                    MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtCodigodpto.ReadOnly = false;
-                    limpiar();
-                }
-                else
-                {
-                    txtEncdpto.Focus();
-                }
-            }
-            if (validarDpto() == false)
-            {
-                Dpto = Dpto.BuscarDpto(int.Parse(txtCodigodpto.Text));
-                if (Dpto.codigo.ToString().Equals(txtCodigodpto.Text))
-                {
-                    MessageBox.Show(" El departamento/división/oficina ya esta registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-                else
+                if (validar() == false)
                 {
                     Dpto.codigo = int.Parse(txtCodigodpto.Text);
                     Dpto.nombre = txtNomdpto.Text;
@@ -100,9 +79,41 @@ namespace Uimemos
                     MessageBox.Show("Inserto con éxito", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiar();
                 }
+                else{ MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);}
+            }
+            else
+            {
+                if ((txtNomdpto.Text != Dpto.nombre || txtEncdpto.Text != Dpto.encargado))
+                {
+                    DialogResult resul = MessageBox.Show("¿Desea Cambiar los datos del departamento/división/oficina ?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resul == DialogResult.Yes)
+                    {
+                        if (validar() == false)
+                        {
+                            Dpto.nombre = txtNomdpto.Text;
+                            Dpto.encargado = txtEncdpto.Text;
+                            Dpto.ActualizarDpto(Dpto);
+                            MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCodigodpto.ReadOnly = false;
+                            limpiar();
+                        }
+                        else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+                    }
+                    else
+                    {
+                         txtNomdpto.Text=Dpto.nombre;
+                         txtEncdpto.Text= Dpto.encargado;
+                    }
+                }else{
+                    MessageBox.Show(" El departamento/división/oficina ya esta registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
         }
 
+        
         public void limpiar()
         {
             foreach (Control ctrl in this.panelDpto.Controls)
@@ -114,6 +125,18 @@ namespace Uimemos
                 }
             }
 
+        }
+
+        public bool validar()
+        {
+            foreach (Control c in this.panelDpto.Controls)
+            {
+                if (c is TextBox & c.Text == String.Empty)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         
@@ -161,9 +184,9 @@ namespace Uimemos
 
         private void txtCodigodpto_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
-                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
