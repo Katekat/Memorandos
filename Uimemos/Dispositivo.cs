@@ -173,7 +173,7 @@ namespace Uimemos
                         dispo.InsertarEnBaseDatos(dispo.tipo,  dispo.codigoControl,  dispo.caracteristicas, dispo.usuario, dispo.coddpto);
                         MessageBox.Show("Se ha insertado con éxito", "Tecnico", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        //limpiar();
+                        limpiar();
                     }
                 }}
             else

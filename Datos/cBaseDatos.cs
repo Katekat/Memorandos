@@ -20,7 +20,7 @@ namespace Datos
 
         private static SqlConnection ObtenerConexion()
         {
-            SqlConnection cnnConexion = new SqlConnection("Server=SANDRA-PC; Database=computacion;Trusted_Connection=True;");
+            SqlConnection cnnConexion = new SqlConnection("Server=KATHERINE; Database=computacion;Trusted_Connection=True;");
             cnnConexion.Open();
             return cnnConexion;
         }
@@ -293,11 +293,29 @@ namespace Datos
             cmdComando.ExecuteNonQuery();
             cnnConexion.Close();
 
+        }
 
 
+        public DataSet ObtenerDispo()
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "spObtenerDispositivo2";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
 
 
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
 
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
 
         }
     }

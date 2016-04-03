@@ -28,6 +28,13 @@ namespace Datos
             return servicio.CargarItems();
         }
 
+
+       public DataSet obtnerlistad()
+       {
+           return servicio.ObtenerDispo();
+
+       }
+
        public cDispositivo BuscarDispositivo(int codigoControl)
        {
            cDispositivo disp = new cDispositivo();

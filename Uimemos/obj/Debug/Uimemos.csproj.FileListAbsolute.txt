@@ -159,3 +159,4 @@ C:\Users\KateF\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.csproj.Generat
 \\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
 \\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.exe
 \\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.FrmRptdispo.resources

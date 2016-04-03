@@ -69,17 +69,13 @@ namespace Uimemos
 
         public bool validarTecnico()
         {
-            tec = tec.BuscarTecnico(txtCedula.Text);
-        
-
-            //if (txtNombre.Text != tec.nombre || txtCargo.Text != tec.cargo)
-            if ((tec.cedula == txtCedula.Text || txtNombre.Text == tec.nombre || txtCargo.Text == tec.cargo))
+            if (txtCedula.Text != tec.cedula)
             {
-                return false;//El tecnico existe
+                return true;
             }
             else
             {
-                return true;//El tecnico no existe
+                return false;
             }
         }
 
@@ -94,7 +90,6 @@ namespace Uimemos
                     tec.nombre = txtNombre.Text;
                     tec.InsertarEnBaseDatos(tec);
                     MessageBox.Show("Se ha insertado con éxito", "Tecnico", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtCedula.ReadOnly = false;
                     limpiar();
                 }
                 else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }

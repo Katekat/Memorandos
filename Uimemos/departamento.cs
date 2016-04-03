@@ -140,7 +140,7 @@ namespace Uimemos
         }
 
         
-
+        //EVENTOS
         private void toolHome_Click(object sender, EventArgs e)
         {
             Home inicio = new Home();
@@ -214,9 +214,7 @@ namespace Uimemos
 
         
 
-        
-
-        
+       
 
         
     }

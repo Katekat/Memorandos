@@ -60,6 +60,12 @@ namespace Uimemos
             hora.Text = DateTime.Now.ToString();
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmRptdispo report = new FrmRptdispo();
+            report.Show();
+        }
+
        
      
         

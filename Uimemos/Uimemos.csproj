@@ -60,6 +60,12 @@
     <Compile Include="Dispositivo.Designer.cs">
       <DependentUpon>Dispositivo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRptdispo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRptdispo.Designer.cs">
+      <DependentUpon>FrmRptdispo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dispositivo.resx">
       <DependentUpon>Dispositivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRptdispo.resx">
+      <DependentUpon>FrmRptdispo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
