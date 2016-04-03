@@ -37,7 +37,7 @@
             this.toolDepartamento = new System.Windows.Forms.ToolStripButton();
             this.toolRevision = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelmemo = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lbDescripcion = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelmemo.SuspendLayout();
             this.panelfechayhora.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,23 +133,23 @@
             this.toolStripButton4.Text = "Memos";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // panel1
+            // panelmemo
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.txtDescripcion);
-            this.panel1.Controls.Add(this.lbDescripcion);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.lbfecha);
-            this.panel1.Controls.Add(this.lbmotivo);
-            this.panel1.Controls.Add(this.txtmotivo);
-            this.panel1.Controls.Add(this.txtdestinatario);
-            this.panel1.Controls.Add(this.lbDestinatario);
-            this.panel1.Location = new System.Drawing.Point(45, 120);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 366);
-            this.panel1.TabIndex = 2;
+            this.panelmemo.BackColor = System.Drawing.Color.Transparent;
+            this.panelmemo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelmemo.Controls.Add(this.btnGuardar);
+            this.panelmemo.Controls.Add(this.txtDescripcion);
+            this.panelmemo.Controls.Add(this.lbDescripcion);
+            this.panelmemo.Controls.Add(this.dateTimePicker1);
+            this.panelmemo.Controls.Add(this.lbfecha);
+            this.panelmemo.Controls.Add(this.lbmotivo);
+            this.panelmemo.Controls.Add(this.txtmotivo);
+            this.panelmemo.Controls.Add(this.txtdestinatario);
+            this.panelmemo.Controls.Add(this.lbDestinatario);
+            this.panelmemo.Location = new System.Drawing.Point(45, 120);
+            this.panelmemo.Name = "panelmemo";
+            this.panelmemo.Size = new System.Drawing.Size(883, 366);
+            this.panelmemo.TabIndex = 2;
             // 
             // btnGuardar
             // 
@@ -162,6 +162,7 @@
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Generar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtDescripcion
             // 
@@ -223,6 +224,7 @@
             this.txtdestinatario.Name = "txtdestinatario";
             this.txtdestinatario.Size = new System.Drawing.Size(236, 20);
             this.txtdestinatario.TabIndex = 1;
+            this.txtdestinatario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdestinatario_KeyPress);
             // 
             // lbDestinatario
             // 
@@ -276,15 +278,15 @@
             this.ClientSize = new System.Drawing.Size(984, 563);
             this.Controls.Add(this.panelfechayhora);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelmemo);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Memos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memos";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelmemo.ResumeLayout(false);
+            this.panelmemo.PerformLayout();
             this.panelfechayhora.ResumeLayout(false);
             this.panelfechayhora.PerformLayout();
             this.ResumeLayout(false);
@@ -301,7 +303,7 @@
         private System.Windows.Forms.ToolStripButton toolDepartamento;
         private System.Windows.Forms.ToolStripButton toolRevision;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelmemo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lbDescripcion;

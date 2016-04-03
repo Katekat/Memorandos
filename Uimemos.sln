@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uimemos", "Uimemos\Uimemos.csproj", "{40F97DFD-03BB-4EFF-84BD-975062938995}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{204542C9-6B1C-42D0-BA05-5F1CCB4697AC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ws", "ws\ws.csproj", "{4FE28670-4B84-4F52-9455-E5EB7AAD31C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{204542C9-6B1C-42D0-BA05-5F1CCB4697AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{204542C9-6B1C-42D0-BA05-5F1CCB4697AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{204542C9-6B1C-42D0-BA05-5F1CCB4697AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FE28670-4B84-4F52-9455-E5EB7AAD31C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FE28670-4B84-4F52-9455-E5EB7AAD31C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FE28670-4B84-4F52-9455-E5EB7AAD31C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FE28670-4B84-4F52-9455-E5EB7AAD31C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

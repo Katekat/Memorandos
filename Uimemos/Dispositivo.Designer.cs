@@ -160,11 +160,12 @@
             this.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Location = new System.Drawing.Point(174, 255);
+            this.BtnGuardar.Location = new System.Drawing.Point(174, 252);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
             this.BtnGuardar.TabIndex = 11;
             this.BtnGuardar.Text = "Guardar";
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // txtCaracteristicas
             // 
@@ -189,6 +190,7 @@
             this.cbnomdpto.Name = "cbnomdpto";
             this.cbnomdpto.Size = new System.Drawing.Size(150, 21);
             this.cbnomdpto.TabIndex = 8;
+            
             // 
             // txtNomuser
             // 
@@ -196,6 +198,7 @@
             this.txtNomuser.Name = "txtNomuser";
             this.txtNomuser.Size = new System.Drawing.Size(150, 20);
             this.txtNomuser.TabIndex = 7;
+            this.txtNomuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomuser_KeyPress);
             // 
             // txtCodigocontrol
             // 
@@ -204,6 +207,7 @@
             this.txtCodigocontrol.Size = new System.Drawing.Size(148, 20);
             this.txtCodigocontrol.TabIndex = 6;
             this.txtCodigocontrol.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigocontrol_KeyDown);
+            this.txtCodigocontrol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigocontrol_KeyPress);
             // 
             // label6
             // 

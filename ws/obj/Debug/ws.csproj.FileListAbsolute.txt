@@ -33,3 +33,4 @@ C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\bin\ws.pdb
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\obj\Debug\ws.csprojResolveAssemblyReference.cache
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\obj\Debug\ws.dll
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\ws\obj\Debug\ws.pdb
+\\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\ws\obj\Debug\ws.csprojResolveAssemblyReference.cache

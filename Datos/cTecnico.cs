@@ -14,7 +14,7 @@ namespace Datos
      public string cargo;
 
         
-       Rsvcmemos.svcmemos servicio= new Rsvcmemos.svcmemos();
+       Datos.cBaseDatos servicio= new Datos.cBaseDatos();
       
       public void InsertarEnBaseDatos(cTecnico persona)
         {

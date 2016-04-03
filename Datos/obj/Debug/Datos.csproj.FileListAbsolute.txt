@@ -36,3 +36,7 @@ C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Datos\bin\Debug\Da
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Datos\obj\Debug\Datos.dll
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Datos\obj\Debug\Datos.pdb
 C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+\\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Datos\bin\Debug\Datos.dll
+\\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Datos\bin\Debug\Datos.pdb
+\\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Datos\obj\Debug\Datos.dll
+\\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Datos\obj\Debug\Datos.pdb

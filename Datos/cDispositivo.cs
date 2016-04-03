@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,9 @@ namespace Datos
         public string usuario;
         public int coddpto;
         public string Nomdpto;
+        cDepartamento dpto = new cDepartamento();
 
-        Rsvcmemos.svcmemos servicio = new Rsvcmemos.svcmemos();
+        Datos.cBaseDatos servicio = new Datos.cBaseDatos();
         
 
        public DataTable  mostrarNombredp()
@@ -50,13 +52,12 @@ namespace Datos
 
            cDispositivo disp = new cDispositivo();
            DataSet dsresultado = servicio.BuscarDpto(coddpto);
-
+           
            if (dsresultado.Tables[0].Rows.Count != 0)
            {
 
-
                disp.Nomdpto = dsresultado.Tables[0].Rows[0]["nombre"].ToString();
-
+               
 
                return disp;
            }
@@ -64,8 +65,25 @@ namespace Datos
            {
                return disp;
            }
+       }
+       public void InsertarEnBaseDatos(string tipo,  int codigoControl,  string caracteristicas, string usuario, int coddpto)
+        {
+            servicio.InsertarDispositivo(tipo,codigoControl,caracteristicas,usuario,coddpto);
+           
+        }
+        public static void insertar(cDispositivo dispositivo)
+       {
+           cDispositivo dispo = new cDispositivo();
+           dispo.InsertarEnBaseDatos(dispo.tipo, dispo.codigoControl, dispo.caracteristicas, dispo.usuario, dispo.coddpto);
+       }
+        public void ActualizarDispositivo(cDispositivo dispo)
+        {
+            servicio.ActualizarDispositivo(dispo.tipo, dispo.codigoControl, dispo.caracteristicas, dispo.usuario, dispo.coddpto);
+
+        }
+        
 
 
        }
     }
-}
+

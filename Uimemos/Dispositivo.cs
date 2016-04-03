@@ -56,9 +56,9 @@ namespace Uimemos
             hora.Text = DateTime.Now.ToString();
         }
 
-// SECCION DE VENTANAS 
+        // SECCION DE VENTANAS 
         //INICIO
-      private void toolStripButton2_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)
         {
             tecnico abrir = new tecnico();
             this.Hide();
@@ -81,6 +81,7 @@ namespace Uimemos
         private void Departamento_Click(object sender, EventArgs e)
         {
             departamento dpto = new departamento();
+
             this.Hide();
             dpto.Show();
         }
@@ -90,19 +91,19 @@ namespace Uimemos
             this.Hide();
             memorandos.Show();
         }
-        
+
         //FIN DE la sección  Ventana
 
-        
 
-                /// BUSCAR DISPOSITIVO 
+        /// BUSCAR DISPOSITIVO 
         private void txtCodigocontrol_KeyDown(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Enter)
             {
 
                 dispo = dispo.BuscarDispositivo(int.Parse(txtCodigocontrol.Text));
-
+                
 
                 if (dispo.codigoControl.ToString() != null)
                 {
@@ -130,16 +131,124 @@ namespace Uimemos
                 }
             }
         }
+        public bool validar_dispositivo()
+        {
+            dispo.BuscarDispositivo(int.Parse(txtCodigocontrol.Text));
+            if (dispo.coddpto == int.Parse(txtCodigocontrol.Text))
+            {
+                return true;
 
-       
+            }
+            else
+            {
 
+                return false;
+            }
+        }
+        public bool validar()
+        {
+            foreach (Control c in this.paneldispo.Controls)
+            {
+                if (c is TextBox & c.Text == String.Empty)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            if (validar_dispositivo() == false)
+            {
+                if (validar() == false)
+                {
+                    {
+                        dispo.codigoControl = int.Parse(txtCodigocontrol.Text);
+                        dispo.Nomdpto = cbnomdpto.SelectedValue.ToString();
+                        dispo.coddpto = int.Parse(dispo.Nomdpto);
+                        dispo.tipo = cbTipo.SelectedValue.ToString();
+                        dispo.caracteristicas = txtCaracteristicas.Text;
+                        dispo.usuario = txtNomuser.Text;
+                        dispo.InsertarEnBaseDatos(dispo.tipo,  dispo.codigoControl,  dispo.caracteristicas, dispo.usuario, dispo.coddpto);
+                        MessageBox.Show("Se ha insertado con éxito", "Tecnico", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        //limpiar();
+                    }
+                }}
+            else
+            {
+                if ((txtCaracteristicas.Text != dispo.caracteristicas || txtNomuser.Text!=dispo.usuario))
+                {
+                    DialogResult resul = MessageBox.Show("¿Desea Cambiar los datos del dispositivo?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resul == DialogResult.Yes)
+                    {
+                        if (validar() == false)
+                        {
+                            dispo.caracteristicas = txtCaracteristicas.Text;
+                            dispo.usuario = txtNomuser.Text;
+                            dispo.ActualizarDispositivo(dispo);
+                            MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCodigocontrol.ReadOnly = false;
+                            //limpiar();
+                        }
+                        else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
+                    }
+                    else
+                    {
+                        txtCaracteristicas.Text = dispo.caracteristicas;
+                        txtNomuser.Text = dispo.usuario;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(" El dispositivo ya se encuentra registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
 
+            }
 
+            }
 
+        private void txtCodigocontrol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true
+                    ;
+                return;
+            }
+        }
 
+        private void txtNomuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        }
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+    
+
+    
+    
+    

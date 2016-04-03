@@ -13,7 +13,7 @@ namespace Datos
        public string nombre ;
        public string encargado;
 
-       Rsvcmemos.svcmemos servicio = new Rsvcmemos.svcmemos();
+       Datos.cBaseDatos servicio = new Datos.cBaseDatos();
        public void InsertarEnBaseDatos(cDepartamento pDpto)
        {
            ///Metodo de inserciò0n

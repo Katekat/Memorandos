@@ -37,7 +37,7 @@
             this.toolDpto = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelRevision = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cbnom3 = new System.Windows.Forms.ComboBox();
             this.nomdpto = new System.Windows.Forms.ComboBox();
@@ -69,7 +69,7 @@
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelRevision.SuspendLayout();
             this.panelfechayhora.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,38 +120,38 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
-            // panel1
+            // panelRevision
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.cbnom3);
-            this.panel1.Controls.Add(this.nomdpto);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.cbnom2);
-            this.panel1.Controls.Add(this.cbstatus);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.fechasalida);
-            this.panel1.Controls.Add(this.txtFechaen);
-            this.panel1.Controls.Add(this.cbnom1);
-            this.panel1.Controls.Add(this.txtrecomendaciones);
-            this.panel1.Controls.Add(this.txtdiagfinal);
-            this.panel1.Controls.Add(this.txtdiagnini);
-            this.panel1.Controls.Add(this.txtCodigocontrol);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label1);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.panelRevision.BackColor = System.Drawing.Color.Transparent;
+            this.panelRevision.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelRevision.Controls.Add(this.btnGuardar);
+            this.panelRevision.Controls.Add(this.cbnom3);
+            this.panelRevision.Controls.Add(this.nomdpto);
+            this.panelRevision.Controls.Add(this.label14);
+            this.panelRevision.Controls.Add(this.cbnom2);
+            this.panelRevision.Controls.Add(this.cbstatus);
+            this.panelRevision.Controls.Add(this.label13);
+            this.panelRevision.Controls.Add(this.fechasalida);
+            this.panelRevision.Controls.Add(this.txtFechaen);
+            this.panelRevision.Controls.Add(this.cbnom1);
+            this.panelRevision.Controls.Add(this.txtrecomendaciones);
+            this.panelRevision.Controls.Add(this.txtdiagfinal);
+            this.panelRevision.Controls.Add(this.txtdiagnini);
+            this.panelRevision.Controls.Add(this.txtCodigocontrol);
+            this.panelRevision.Controls.Add(this.label12);
+            this.panelRevision.Controls.Add(this.label9);
+            this.panelRevision.Controls.Add(this.panel2);
+            this.panelRevision.Controls.Add(this.label11);
+            this.panelRevision.Controls.Add(this.label10);
+            this.panelRevision.Controls.Add(this.label8);
+            this.panelRevision.Controls.Add(this.label7);
+            this.panelRevision.Controls.Add(this.label6);
+            this.panelRevision.Controls.Add(this.label5);
+            this.panelRevision.Controls.Add(this.label4);
+            this.panelRevision.Controls.Add(this.label3);
+            this.panelRevision.Controls.Add(this.label1);
+            resources.ApplyResources(this.panelRevision, "panelRevision");
+            this.panelRevision.Name = "panelRevision";
             // 
             // btnGuardar
             // 
@@ -161,6 +161,7 @@
             resources.ApplyResources(this.btnGuardar, "btnGuardar");
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cbnom3
             // 
@@ -234,6 +235,7 @@
             this.txtCodigocontrol.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.txtCodigocontrol, "txtCodigocontrol");
             this.txtCodigocontrol.Name = "txtCodigocontrol";
+            this.txtCodigocontrol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigocontrol_KeyPress);
             // 
             // label12
             // 
@@ -324,13 +326,13 @@
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.panelfechayhora);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelRevision);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Revision";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelRevision.ResumeLayout(false);
+            this.panelRevision.PerformLayout();
             this.panelfechayhora.ResumeLayout(false);
             this.panelfechayhora.PerformLayout();
             this.ResumeLayout(false);
@@ -346,7 +348,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelRevision;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;

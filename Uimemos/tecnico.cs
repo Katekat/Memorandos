@@ -69,70 +69,70 @@ namespace Uimemos
 
         public bool validarTecnico()
         {
-            if (txtNombre.Text != tec.nombre || txtCargo.Text != tec.cargo)
+            tec = tec.BuscarTecnico(txtCedula.Text);
+        
+
+            //if (txtNombre.Text != tec.nombre || txtCargo.Text != tec.cargo)
+            if ((tec.cedula == txtCedula.Text || txtNombre.Text == tec.nombre || txtCargo.Text == tec.cargo))
             {
-                return true;
+                return false;//El tecnico existe
             }
             else
             {
-                return false;
+                return true;//El tecnico no existe
             }
         }
 
         private void btnGuardartecnico_Click(object sender, EventArgs e)
         {
-
             if (validarTecnico() == true)
             {
-                     DialogResult result=  MessageBox.Show("¿Desea Cambiar los datos del técnico?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                     if (result == DialogResult.Yes)
-                     {
-                            if(validar()==false){
-                        
-
-                                 tec.cargo = txtCargo.Text;
-                                 tec.nombre = txtNombre.Text;
-                                tec.actualizarTecnico(tec);
-                                 MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                 txtCedula.ReadOnly = false;
-                                 limpiar();
-                            }
-                             else
-                            {
-                             MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                         }
-                         
-                     }
-                     else
-                     {
-                         txtNombre.Text = tec.nombre;
-                         txtCargo.Text = tec.cargo;
-
-                     }
-            }
-            if (validarTecnico() == false)
-            {
-                tec = tec.BuscarTecnico(txtCedula.Text);
-                if (tec.cedula.Equals(txtCedula.Text))
+                if (validar() == false)
                 {
-                    MessageBox.Show(" La persona ya esta registrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
-                    limpiar();
-                    txtCedula.ReadOnly = false;
-                }
-                else { 
                     tec.cedula = txtCedula.Text;
-                    tec.nombre = txtNombre.Text;
                     tec.cargo = txtCargo.Text;
-                    tec.InsertarEnBaseDatos(tec) ;
-                    MessageBox.Show("Inserto con éxito", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tec.nombre = txtNombre.Text;
+                    tec.InsertarEnBaseDatos(tec);
+                    MessageBox.Show("Se ha insertado con éxito", "Tecnico", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCedula.ReadOnly = false;
                     limpiar();
+                }
+                else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+            else
+            {
+                if ((txtNombre.Text != tec.nombre || txtCargo.Text != tec.cargo))
+                {
+                    DialogResult resul = MessageBox.Show("¿Desea Cambiar los datos del Técnico?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resul == DialogResult.Yes)
+                    {
+                        if (validar() == false)
+                        {
+                            tec.nombre = txtNombre.Text;
+                            tec.cargo = txtCargo.Text;
+                            tec.actualizarTecnico(tec);
+                            MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCedula.ReadOnly = false;
+                            limpiar();
+                        }
+                        else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+                    }
+                    else
+                    {
+                        txtNombre.Text = tec.nombre;
+                        txtCargo.Text = tec.cargo;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(" El tecnico ya se encuentra registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
 
             }
-
         }
+
 
         public void limpiar()
         {
@@ -176,7 +176,8 @@ namespace Uimemos
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
                 //MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
+                e.Handled = true
+                    ;
                 return;
             }
         }
