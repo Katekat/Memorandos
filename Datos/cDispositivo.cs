@@ -28,10 +28,14 @@ namespace Datos
             return servicio.CargarItems();
         }
 
-
-       public DataSet obtnerlistad()
+       public DataSet obtnerlistadoinicial()
        {
-           return servicio.ObtenerDispo();
+           return servicio.ObtenerDispoinicial();
+
+       }
+       public DataSet obtnerlistad(cDispositivo dispo)
+       {
+           return servicio.ObtenerDispo(dispo.usuario);
 
        }
 

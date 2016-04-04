@@ -13,7 +13,7 @@ namespace Uimemos
 {
     public partial class FrmRptdispo : Form
     {
-        Datos.cDispositivo dipo = new Datos.cDispositivo();
+        Datos.cDispositivo dispo = new Datos.cDispositivo();
         public FrmRptdispo()
         {
             InitializeComponent();
@@ -21,8 +21,20 @@ namespace Uimemos
 
         private void FrmRptdispo_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dipo.obtnerlistad();
+            dataGridView1.DataSource = dispo.obtnerlistadoinicial();
             dataGridView1.DataMember = "consulta";
         }
+   
+           
+
+        private void txtbusqueda_KeyDown(object sender, KeyEventArgs e)
+        {
+             dispo.usuario = e.KeyCode.ToString(); 
+            dataGridView1.DataSource = dispo.obtnerlistad(dispo);
+            dataGridView1.DataMember = "consulta";
+        }
+        
+
+        
     }
 }

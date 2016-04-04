@@ -146,6 +146,9 @@ namespace Datos
             return dsConsulta;
 
         }
+
+        
+
         //BUSCAR NREVISION PARA VERIFICAR EXISTENCIA EN TABLA REVISION
         public DataSet BuscarnRevision(int codigocontrol)
         {
@@ -296,7 +299,30 @@ namespace Datos
         }
 
 
-        public DataSet ObtenerDispo()
+        public DataSet ObtenerDispo(string txtuser)
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "spFiltrarnombre";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            cmdComando.Parameters.Add("@User", SqlDbType.VarChar).Value = txtuser;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
+        public DataSet ObtenerDispoinicial()
         {
 
             SqlConnection cnnConexion = ObtenerConexion();
@@ -305,8 +331,8 @@ namespace Datos
             strSentenciaSQL = string.Format(strSentenciaSQL);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
-
-
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            
             SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
 
             DataSet dsConsulta = new DataSet();
