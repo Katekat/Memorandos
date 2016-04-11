@@ -27,9 +27,11 @@ namespace Uimemos
    
            
         //Buscar un mejor evento para manejar el filtro
-        private void txtbusqueda_KeyDown(object sender, KeyEventArgs e)
+        
+
+        private void txtbusqueda_KeyUp(object sender, KeyEventArgs e)
         {
-             dispo.usuario = e.KeyCode.ToString(); 
+            dispo.usuario = e.KeyCode.ToString();
             dataGridView1.DataSource = dispo.obtnerlistad(dispo);
             dataGridView1.DataMember = "consulta";
         }

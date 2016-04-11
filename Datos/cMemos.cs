@@ -13,17 +13,18 @@ namespace Datos
 {
    public class cMemos
     {
-        public int nmemo;
+        
         public string fecha;
         public string descripcion;
         public string remitente;
         public string destinatario;
         public string motivo;
+       
       
         Datos.cBaseDatos servicio = new Datos.cBaseDatos();
         public void InsertarEnBaseDatos(cMemos memorando)
         {
-            servicio.InsertarMemo(memorando.nmemo, memorando.fecha, memorando.descripcion, memorando.destinatario, memorando.motivo);
+            servicio.InsertarMemo( memorando.fecha, memorando.descripcion, memorando.remitente, memorando.destinatario, memorando.motivo);
         }
          public static void insertar(cMemos memorando) {
             cMemos memo = new cMemos();

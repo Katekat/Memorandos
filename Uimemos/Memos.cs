@@ -70,11 +70,11 @@ namespace Uimemos
         {
             if (validar() == false)
             {
-                memo.nmemo = cont;
+                //memo.nmemo = cont;
                 memo.destinatario = txtdestinatario.Text;
                 memo.descripcion = txtDescripcion.Text;
                 memo.motivo = txtmotivo.Text;
-                memo.fecha = dateTimePicker1.Value.ToString("ddMMyyyy");
+                memo.fecha = dateTimePicker1.Value.ToString("yyyyMMdd");
                 memo.InsertarEnBaseDatos(memo);
                 MessageBox.Show("Se ha insertado con éxito", "Memorando", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 

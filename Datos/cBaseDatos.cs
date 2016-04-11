@@ -269,12 +269,12 @@ namespace Datos
             cnnConexion.Close();
         }
 
-        public void InsertarMemo(int nmemo, string fecha, string descripcion, string destinatario, string motivo)
+        public void InsertarMemo(string fecha, string descripcion, string remitente, string destinatario, string motivo)
         {
             SqlConnection cnnConexion = ObtenerConexion();
 
-            string strSentenciaSQL = "insert into memos Values ({0},'{1}','{2}','{4}','{5}')";
-            strSentenciaSQL = string.Format(strSentenciaSQL, nmemo, fecha, descripcion, destinatario, motivo);
+            string strSentenciaSQL = "insert into memos Values ('{0}','{1}',default,'{3}','{4}')";
+            strSentenciaSQL = string.Format(strSentenciaSQL, fecha, descripcion, remitente, destinatario, motivo);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
 

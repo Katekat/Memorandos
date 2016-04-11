@@ -190,7 +190,6 @@
             this.cbnomdpto.Name = "cbnomdpto";
             this.cbnomdpto.Size = new System.Drawing.Size(150, 21);
             this.cbnomdpto.TabIndex = 8;
-            
             // 
             // txtNomuser
             // 
