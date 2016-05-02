@@ -39,4 +39,3 @@ C:\Users\KateF\Documents\Visual Studio 2013\Projects\ALCALDIA\Datos\obj\Debug\Da
 \\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Datos\bin\Debug\Datos.pdb
 \\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Datos\obj\Debug\Datos.dll
 \\SANDRA-PC\Users\SANDRA\Source\Repos\Memorandos2\Datos\obj\Debug\Datos.pdb
-C:\Users\KateF\Source\Repos\Memorandos3\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache

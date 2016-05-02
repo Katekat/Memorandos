@@ -36,8 +36,15 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +79,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Memorando.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Memorando.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Memos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +98,12 @@
     </Compile>
     <Compile Include="Revision.Designer.cs">
       <DependentUpon>Revision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptmemorando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptmemorando.Designer.cs">
+      <DependentUpon>rptmemorando.cs</DependentUpon>
     </Compile>
     <Compile Include="tecnico.cs">
       <SubType>Form</SubType>
@@ -104,6 +123,10 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Memorando.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Memorando.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Memos.resx">
       <DependentUpon>Memos.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="Revision.resx">
       <DependentUpon>Revision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptmemorando.resx">
+      <DependentUpon>rptmemorando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tecnico.resx">
       <DependentUpon>tecnico.cs</DependentUpon>
@@ -141,7 +167,9 @@
       <Name>Datos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

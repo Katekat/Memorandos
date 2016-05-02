@@ -147,7 +147,30 @@ namespace Datos
 
         }
 
-        
+        //Obtener la cantidad de memorandos
+
+        public DataSet obtmemos()
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "SELECT COUNT(*) as nmemo FROM memos";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+
+
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
 
         //BUSCAR NREVISION PARA VERIFICAR EXISTENCIA EN TABLA REVISION
         public DataSet BuscarnRevision(int codigocontrol)
@@ -269,12 +292,12 @@ namespace Datos
             cnnConexion.Close();
         }
 
-        public void InsertarMemo(string fecha, string descripcion, string remitente, string destinatario, string motivo)
+        public void InsertarMemo(int nmemo, string fecha, string descripcion, string remitente, string destinatario, string motivo)
         {
             SqlConnection cnnConexion = ObtenerConexion();
 
-            string strSentenciaSQL = "insert into memos Values ('{0}','{1}',default,'{3}','{4}')";
-            strSentenciaSQL = string.Format(strSentenciaSQL, fecha, descripcion, remitente, destinatario, motivo);
+            string strSentenciaSQL = "insert into memos Values ({0},'{1}','{2}',default,'{4}','{5}')";
+            strSentenciaSQL = string.Format(strSentenciaSQL, nmemo, fecha, descripcion, remitente, destinatario, motivo);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
 
@@ -284,6 +307,7 @@ namespace Datos
 
         }
 
+        
         public void InsertarRevision(int nrevision, int codigocontrol, int coddpto, string Dinicial, string Dfinal, string recomendaciones, string status, string fechaI, string recibe, string fechaF)
         {
             SqlConnection cnnConexion = ObtenerConexion();

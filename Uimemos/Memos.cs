@@ -11,14 +11,15 @@ using System.Windows.Forms;
 
 namespace Uimemos
 {
-    
     public partial class Memos : Form
     {
+        int cont = 0;
         Datos.cMemos memo = new Datos.cMemos();
-        int cont = 1;
+        
         public Memos()
         {
-             
+            
+            
             InitializeComponent();
             timer1.Enabled = true;
         }
@@ -70,7 +71,8 @@ namespace Uimemos
         {
             if (validar() == false)
             {
-                //memo.nmemo = cont;
+                memo= memo.obtnum();
+                memo.nmemo = (memo.nmemo)+1;
                 memo.destinatario = txtdestinatario.Text;
                 memo.descripcion = txtDescripcion.Text;
                 memo.motivo = txtmotivo.Text;
@@ -84,6 +86,9 @@ namespace Uimemos
             }
             else { MessageBox.Show("Todos los campos deben estar llenos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information); }
 
+            rptmemorando reporte = new rptmemorando();
+            reporte.nmemo = memo.nmemo;
+            reporte.ShowDialog();
         }
 
 
@@ -100,12 +105,32 @@ namespace Uimemos
         }
         private void txtdestinatario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            //if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            //{
+            //    MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    e.Handled = true;
+            //    return;
+            //}
+
+            if (Char.IsLetter(e.KeyChar))
             {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
+                e.Handled = false;
             }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            
+            else
+            {
+                e.Handled = true;
+            }
+
+            
         }
         public bool validar()
         {
@@ -117,6 +142,24 @@ namespace Uimemos
                 }
             }
             return false;
+        }
+
+        
+
+        private void Memos_Load(object sender, EventArgs e)
+        {
+            dateTimePicker1.MinDate = DateTime.Today;
+            dateTimePicker1.MaxDate = DateTime.Today.AddYears(1);
+        }
+
+        private void txtmotivo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
 
     }

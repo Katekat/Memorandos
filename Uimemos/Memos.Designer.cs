@@ -85,7 +85,6 @@
             // toolDispositivo
             // 
             this.toolDispositivo.Image = ((System.Drawing.Image)(resources.GetObject("toolDispositivo.Image")));
-            this.toolDispositivo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolDispositivo.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.toolDispositivo.Name = "toolDispositivo";
             this.toolDispositivo.Size = new System.Drawing.Size(69, 56);
@@ -105,13 +104,12 @@
             // 
             // toolDepartamento
             // 
-            this.toolDepartamento.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolDepartamento.Image = ((System.Drawing.Image)(resources.GetObject("toolDepartamento.Image")));
-            this.toolDepartamento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolDepartamento.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolDepartamento.Name = "toolDepartamento";
-            this.toolDepartamento.Size = new System.Drawing.Size(60, 56);
+            this.toolDepartamento.Size = new System.Drawing.Size(87, 56);
             this.toolDepartamento.Text = "Departamento";
+            this.toolDepartamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolDepartamento.Click += new System.EventHandler(this.toolDepartamento_Click);
             // 
             // toolRevision
@@ -171,7 +169,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(156, 161);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(236, 116);
+            this.txtDescripcion.Size = new System.Drawing.Size(416, 116);
             this.txtDescripcion.TabIndex = 7;
             // 
             // lbDescripcion
@@ -186,10 +184,14 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.GradientActiveCaption;
             this.dateTimePicker1.Location = new System.Drawing.Point(156, 122);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2016, 4, 14, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(236, 20);
             this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.Value = new System.DateTime(2016, 4, 14, 0, 0, 0, 0);
             // 
             // lbfecha
             // 
@@ -215,14 +217,16 @@
             // 
             this.txtmotivo.Location = new System.Drawing.Point(156, 88);
             this.txtmotivo.Name = "txtmotivo";
-            this.txtmotivo.Size = new System.Drawing.Size(236, 20);
+            this.txtmotivo.Size = new System.Drawing.Size(416, 20);
             this.txtmotivo.TabIndex = 2;
+            this.txtmotivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmotivo_KeyPress);
             // 
             // txtdestinatario
             // 
-            this.txtdestinatario.Location = new System.Drawing.Point(156, 48);
+            this.txtdestinatario.Location = new System.Drawing.Point(156, 35);
+            this.txtdestinatario.Multiline = true;
             this.txtdestinatario.Name = "txtdestinatario";
-            this.txtdestinatario.Size = new System.Drawing.Size(236, 20);
+            this.txtdestinatario.Size = new System.Drawing.Size(416, 34);
             this.txtdestinatario.TabIndex = 1;
             this.txtdestinatario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdestinatario_KeyPress);
             // 
@@ -230,7 +234,7 @@
             // 
             this.lbDestinatario.AutoSize = true;
             this.lbDestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDestinatario.Location = new System.Drawing.Point(67, 52);
+            this.lbDestinatario.Location = new System.Drawing.Point(67, 35);
             this.lbDestinatario.Name = "lbDestinatario";
             this.lbDestinatario.Size = new System.Drawing.Size(83, 16);
             this.lbDestinatario.TabIndex = 0;
@@ -283,6 +287,7 @@
             this.Name = "Memos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Memos";
+            this.Load += new System.EventHandler(this.Memos_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelmemo.ResumeLayout(false);
