@@ -68,7 +68,6 @@
             this.panelfechayhora = new System.Windows.Forms.Panel();
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panelRevision.SuspendLayout();
             this.panelfechayhora.SuspendLayout();
@@ -83,8 +82,7 @@
             this.toolStripButton2,
             this.toolDpto,
             this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton6});
+            this.toolStripButton4});
             this.toolStrip1.Name = "toolStrip1";
             // 
             // toolStripButton5
@@ -322,12 +320,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.toolStripButton6, "toolStripButton6");
-            this.toolStripButton6.Name = "toolStripButton6";
-            // 
             // Revision
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -388,6 +380,5 @@
         private System.Windows.Forms.Label hora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }

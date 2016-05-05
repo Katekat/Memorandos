@@ -48,6 +48,8 @@
             this.panelfechayhora = new System.Windows.Forms.Panel();
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbestado = new System.Windows.Forms.ComboBox();
             this.toolStrip1.SuspendLayout();
             this.paneltec.SuspendLayout();
             this.panelfechayhora.SuspendLayout();
@@ -120,6 +122,8 @@
             // 
             this.paneltec.BackColor = System.Drawing.Color.Transparent;
             this.paneltec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneltec.Controls.Add(this.cbestado);
+            this.paneltec.Controls.Add(this.label5);
             this.paneltec.Controls.Add(this.btnGuardartecnico);
             this.paneltec.Controls.Add(this.txtNombre);
             this.paneltec.Controls.Add(this.txtCargo);
@@ -129,7 +133,7 @@
             this.paneltec.Controls.Add(this.label2);
             this.paneltec.Location = new System.Drawing.Point(205, 158);
             this.paneltec.Name = "paneltec";
-            this.paneltec.Size = new System.Drawing.Size(603, 248);
+            this.paneltec.Size = new System.Drawing.Size(603, 261);
             this.paneltec.TabIndex = 2;
             // 
             // btnGuardartecnico
@@ -137,7 +141,7 @@
             this.btnGuardartecnico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnGuardartecnico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnGuardartecnico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardartecnico.Location = new System.Drawing.Point(120, 171);
+            this.btnGuardartecnico.Location = new System.Drawing.Point(249, 205);
             this.btnGuardartecnico.Name = "btnGuardartecnico";
             this.btnGuardartecnico.Size = new System.Drawing.Size(75, 23);
             this.btnGuardartecnico.TabIndex = 6;
@@ -147,7 +151,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(101, 83);
+            this.txtNombre.Location = new System.Drawing.Point(226, 81);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(118, 20);
             this.txtNombre.TabIndex = 5;
@@ -155,7 +159,7 @@
             // 
             // txtCargo
             // 
-            this.txtCargo.Location = new System.Drawing.Point(101, 115);
+            this.txtCargo.Location = new System.Drawing.Point(226, 119);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(118, 20);
             this.txtCargo.TabIndex = 4;
@@ -164,7 +168,7 @@
             // txtCedula
             // 
             this.txtCedula.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtCedula.Location = new System.Drawing.Point(101, 46);
+            this.txtCedula.Location = new System.Drawing.Point(226, 42);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(118, 20);
             this.txtCedula.TabIndex = 3;
@@ -175,7 +179,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 115);
+            this.label4.Location = new System.Drawing.Point(136, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 2;
@@ -185,7 +189,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 83);
+            this.label3.Location = new System.Drawing.Point(136, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 16);
             this.label3.TabIndex = 1;
@@ -195,7 +199,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 46);
+            this.label2.Location = new System.Drawing.Point(136, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 0;
@@ -236,6 +240,24 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(142, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Estado:";
+            // 
+            // cbestado
+            // 
+            this.cbestado.FormattingEnabled = true;
+            this.cbestado.Location = new System.Drawing.Point(226, 159);
+            this.cbestado.Name = "cbestado";
+            this.cbestado.Size = new System.Drawing.Size(118, 21);
+            this.cbestado.TabIndex = 8;
+            // 
             // tecnico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +272,7 @@
             this.Name = "tecnico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Técnico";
+            this.Load += new System.EventHandler(this.tecnico_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.paneltec.ResumeLayout(false);
@@ -281,5 +304,7 @@
         private System.Windows.Forms.Panel panelfechayhora;
         private System.Windows.Forms.Label hora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox cbestado;
+        private System.Windows.Forms.Label label5;
     }
 }

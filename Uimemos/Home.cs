@@ -62,7 +62,25 @@ namespace Uimemos
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmRptdispo report = new FrmRptdispo();
+            
+        }
+
+        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Listado report = new Listado();
+            report.Show();
+        }
+
+        private void cantidadPorDptoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDispDpto report = new frmDispDpto();
+            report.Show();
+
+        }
+
+        private void listadoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Listadotecnico report = new Listadotecnico();
             report.Show();
         }
 

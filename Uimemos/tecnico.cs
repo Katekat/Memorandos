@@ -57,6 +57,7 @@ namespace Uimemos
                     txtCedula.ReadOnly = Enabled;
                     txtNombre.Text = tec.nombre;
                     txtCargo.Text = tec.cargo;
+                    cbestado.Text = tec.estatus;
 
                 }
                 else
@@ -88,6 +89,7 @@ namespace Uimemos
                     tec.cedula = txtCedula.Text;
                     tec.cargo = txtCargo.Text;
                     tec.nombre = txtNombre.Text;
+                    tec.estatus = cbestado.Text;
                     tec.InsertarEnBaseDatos(tec);
                     MessageBox.Show("Se ha insertado con éxito", "Tecnico", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limpiar();
@@ -96,7 +98,7 @@ namespace Uimemos
             }
             else
             {
-                if ((txtNombre.Text != tec.nombre || txtCargo.Text != tec.cargo))
+                if ((txtNombre.Text != tec.nombre || txtCargo.Text != tec.cargo || cbestado.Text != tec.estatus))
                 {
                     DialogResult resul = MessageBox.Show("¿Desea Cambiar los datos del Técnico?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (resul == DialogResult.Yes)
@@ -105,6 +107,7 @@ namespace Uimemos
                         {
                             tec.nombre = txtNombre.Text;
                             tec.cargo = txtCargo.Text;
+                            tec.estatus = cbestado.Text;
                             tec.actualizarTecnico(tec);
                             MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txtCedula.ReadOnly = false;
@@ -187,6 +190,14 @@ namespace Uimemos
                 }
             }
             return false;
+        }
+
+        private void tecnico_Load(object sender, EventArgs e)
+        {
+            
+            cbestado.Items.Add("Activo");
+            cbestado.Items.Add("Inactivo");
+            cbestado.SelectedIndex = 0;
         }
     }
 }

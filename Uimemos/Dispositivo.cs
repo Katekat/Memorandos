@@ -107,8 +107,13 @@ namespace Uimemos
 
                 if (dispo.codigoControl.ToString() != null)
                 {
-
-                    MessageBox.Show("DISPOSITIVO YA EXISTE", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCodigocontrol.Text = dispo.codigoControl.ToString();
+                    txtNomuser.Text = dispo.usuario;
+                    txtCodigocontrol.ReadOnly = false;
+                    txtCaracteristicas.Text = dispo.caracteristicas;
+                    cbTipo.Text = dispo.tipo;
+                    cbnomdpto.Text = dispo.Nomdpto;
+                    MessageBox.Show("DISPOSITIVO REGISTRADO", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 if (dispo.codigoControl == 0)
                 {
@@ -133,8 +138,8 @@ namespace Uimemos
         }
         public bool validar_dispositivo()
         {
-            dispo.BuscarDispositivo(int.Parse(txtCodigocontrol.Text));
-            if (dispo.coddpto == int.Parse(txtCodigocontrol.Text))
+            
+            if (int.Parse(txtCodigocontrol.Text) != dispo.codigoControl)
             {
                 return true;
 
@@ -159,23 +164,21 @@ namespace Uimemos
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (validar_dispositivo() == false)
+            if (validar_dispositivo() == true)
             {
                 if (validar() == false)
-                {
-                    {
-                        dispo.codigoControl = int.Parse(txtCodigocontrol.Text);
+                {       dispo.codigoControl = int.Parse(txtCodigocontrol.Text);
                         dispo.Nomdpto = cbnomdpto.SelectedValue.ToString();
                         dispo.coddpto = int.Parse(dispo.Nomdpto);
                         dispo.tipo = cbTipo.SelectedValue.ToString();
                         dispo.caracteristicas = txtCaracteristicas.Text;
                         dispo.usuario = txtNomuser.Text;
                         dispo.InsertarEnBaseDatos(dispo.tipo,  dispo.codigoControl,  dispo.caracteristicas, dispo.usuario, dispo.coddpto);
-                        MessageBox.Show("Se ha insertado con éxito", "Tecnico", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        MessageBox.Show("Se ha insertado con éxito", "Dispositivo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limpiar();
-                    }
-                }}
+                }
+                   else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
             else
             {
                 if ((txtCaracteristicas.Text != dispo.caracteristicas || txtNomuser.Text!=dispo.usuario))
@@ -204,7 +207,7 @@ namespace Uimemos
                 else
                 {
                     MessageBox.Show(" El dispositivo ya se encuentra registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    limpiar();
                 }
 
             }

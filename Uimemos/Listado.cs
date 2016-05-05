@@ -11,10 +11,10 @@ using Datos;
 
 namespace Uimemos
 {
-    public partial class FrmRptdispo : Form
+    public partial class Listado : Form
     {
         Datos.cDispositivo dispo = new Datos.cDispositivo();
-        public FrmRptdispo()
+        public Listado()
         {
             InitializeComponent();
         }

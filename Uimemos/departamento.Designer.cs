@@ -49,7 +49,6 @@
             this.panelfechayhora = new System.Windows.Forms.Panel();
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panelDpto.SuspendLayout();
             this.panelfechayhora.SuspendLayout();
@@ -64,8 +63,7 @@
             this.toolTecnico,
             this.toolDepartamento,
             this.toolRevision,
-            this.toolMemos,
-            this.toolStripButton1});
+            this.toolMemos});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(984, 59);
@@ -251,15 +249,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 56);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
             // departamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +295,5 @@
         private System.Windows.Forms.Panel panelfechayhora;
         private System.Windows.Forms.Label hora;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

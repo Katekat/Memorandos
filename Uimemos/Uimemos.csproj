@@ -67,17 +67,29 @@
     <Compile Include="Dispositivo.Designer.cs">
       <DependentUpon>Dispositivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRptdispo.cs">
+    <Compile Include="frmDispDpto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRptdispo.Designer.cs">
-      <DependentUpon>FrmRptdispo.cs</DependentUpon>
+    <Compile Include="frmDispDpto.Designer.cs">
+      <DependentUpon>frmDispDpto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado.Designer.cs">
+      <DependentUpon>Listado.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listadotecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listadotecnico.Designer.cs">
+      <DependentUpon>Listadotecnico.cs</DependentUpon>
     </Compile>
     <Compile Include="Memorando.cs">
       <AutoGen>True</AutoGen>
@@ -117,11 +129,17 @@
     <EmbeddedResource Include="Dispositivo.resx">
       <DependentUpon>Dispositivo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRptdispo.resx">
-      <DependentUpon>FrmRptdispo.cs</DependentUpon>
+    <EmbeddedResource Include="frmDispDpto.resx">
+      <DependentUpon>frmDispDpto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado.resx">
+      <DependentUpon>Listado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listadotecnico.resx">
+      <DependentUpon>Listadotecnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Memorando.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

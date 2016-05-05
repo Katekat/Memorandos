@@ -38,6 +38,10 @@ namespace Datos
            return servicio.ObtenerDispo(dispo.usuario);
 
        }
+       public DataSet listadodispdpto()
+       {
+           return servicio.ObtenerDispdpto();
+       }
 
        public cDispositivo BuscarDispositivo(int codigoControl)
        {
@@ -48,7 +52,12 @@ namespace Datos
            {
 
                disp.codigoControl = int.Parse(dsresultado.Tables[0].Rows[0]["codigoControl"].ToString());
-             
+               disp.caracteristicas = dsresultado.Tables[0].Rows[0]["caracteristicas"].ToString();
+               disp.tipo = dsresultado.Tables[0].Rows[0]["tipo"].ToString();
+               disp.usuario = dsresultado.Tables[0].Rows[0]["usuario"].ToString();
+               disp.coddpto =int.Parse( dsresultado.Tables[0].Rows[0]["coddpto"].ToString());
+                DataSet sresultado = servicio.BuscarDpto(disp.coddpto);
+                disp.Nomdpto = sresultado.Tables[0].Rows[0]["nombre"].ToString();
                return disp;
            }
            else

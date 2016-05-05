@@ -12,6 +12,7 @@ namespace Datos
      public string cedula;
      public string nombre;
      public string cargo;
+     public string estatus;
 
         
        Datos.cBaseDatos servicio= new Datos.cBaseDatos();
@@ -19,7 +20,7 @@ namespace Datos
       public void InsertarEnBaseDatos(cTecnico persona)
         {
             ///Metodo de inserciò0n
-           servicio.InsertarTecnico(persona.cedula, persona.nombre, persona.cargo);
+           servicio.InsertarTecnico(persona.cedula, persona.nombre, persona.cargo, persona.estatus);
            
         }
         public static void insertar(cTecnico persona) {
@@ -41,7 +42,7 @@ namespace Datos
                 tec.cedula = dsresultado.Tables[0].Rows[0]["cedula"].ToString();
                 tec.nombre = dsresultado.Tables[0].Rows[0]["nombre"].ToString();
                 tec.cargo = dsresultado.Tables[0].Rows[0]["cargo"].ToString();
-                
+                tec.estatus = dsresultado.Tables[0].Rows[0]["estatus"].ToString();
                 return tec;
             }
             else
@@ -53,7 +54,11 @@ namespace Datos
 
         public void actualizarTecnico(cTecnico tec)
         {
-            servicio.ActualizarTecnico(tec.cedula, tec.nombre, tec.cargo);
+            servicio.ActualizarTecnico(tec.cedula, tec.nombre, tec.cargo, tec.estatus);
+        }
+        public DataSet obtenertecnicos()
+        {
+            return servicio.ObtenerTecnicos();
         }
     }
        

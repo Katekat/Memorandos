@@ -68,6 +68,8 @@ namespace Datos
         }
 
 
+
+
         public void InsertarDepartamento(int codigo, string nombre, string encargado)
         {
             SqlConnection cnnConexion = ObtenerConexion();
@@ -82,12 +84,12 @@ namespace Datos
         }
 
 
-        public void InsertarTecnico(string pCedula, string pnombre, string pcargo)
+        public void InsertarTecnico(string pCedula, string pnombre, string pcargo, string estatus)
         {
             SqlConnection cnnConexion = ObtenerConexion();
 
-            string strSentenciaSQL = "insert into persona Values ('{0}', '{1}', '{2}')";
-            strSentenciaSQL = string.Format(strSentenciaSQL, pCedula, pnombre, pcargo);
+            string strSentenciaSQL = "insert into persona Values ('{0}', '{1}', '{2}', '{3}')";
+            strSentenciaSQL = string.Format(strSentenciaSQL, pCedula, pnombre, pcargo, estatus);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
 
@@ -219,6 +221,8 @@ namespace Datos
             return dsConsulta;
 
         }
+
+
    
         public void ActualizarDepartamento(int codigo, string nombre, string encargado)
         {
@@ -234,11 +238,11 @@ namespace Datos
         }
 
 
-        public void ActualizarTecnico(string cedula, string nombre, string cargo)
+        public void ActualizarTecnico(string cedula, string nombre, string cargo, string estatus)
         {
             SqlConnection ccnConexion = ObtenerConexion();
-            string strSentenciaSQL = "update persona set nombre='{1}',cargo='{2}' where cedula='{0}'";
-            strSentenciaSQL = string.Format(strSentenciaSQL, cedula, nombre, cargo);
+            string strSentenciaSQL = "update persona set nombre='{1}',cargo='{2}', estatus='{3}' where cedula='{0}'";
+            strSentenciaSQL = string.Format(strSentenciaSQL, cedula, nombre, cargo, estatus);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, ccnConexion);
             cmdComando.ExecuteNonQuery();
@@ -350,13 +354,29 @@ namespace Datos
         {
 
             SqlConnection cnnConexion = ObtenerConexion();
-
             string strSentenciaSQL = "spObtenerDispositivo2";
             strSentenciaSQL = string.Format(strSentenciaSQL);
-
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
             cmdComando.CommandType = CommandType.StoredProcedure;
-            
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+        }
+
+        public DataSet ObtenerDispdpto()
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+            string strSentenciaSQL = "splistadodispdpto";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
 
             DataSet dsConsulta = new DataSet();
@@ -368,5 +388,30 @@ namespace Datos
             return dsConsulta;
 
         }
+
+        public DataSet ObtenerTecnicos()
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+            string strSentenciaSQL = "splistadotecnicos";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
     }
+
+
+
+
 }

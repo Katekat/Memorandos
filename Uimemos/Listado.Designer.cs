@@ -1,6 +1,6 @@
 ﻿namespace Uimemos
 {
-    partial class FrmRptdispo
+    partial class Listado
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRptdispo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
@@ -71,7 +71,6 @@
             this.txtbusqueda.Name = "txtbusqueda";
             this.txtbusqueda.Size = new System.Drawing.Size(323, 26);
             this.txtbusqueda.TabIndex = 2;
-            
             this.txtbusqueda.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtbusqueda_KeyUp);
             // 
             // pictureBox1
@@ -100,7 +99,7 @@
             this.btnBuscar.TabIndex = 33;
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // FrmRptdispo
+            // Listado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,9 +111,9 @@
             this.Controls.Add(this.txtbusqueda);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmRptdispo";
+            this.Name = "Listado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmRptdispo";
+            this.Text = "Listado";
             this.Load += new System.EventHandler(this.FrmRptdispo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
