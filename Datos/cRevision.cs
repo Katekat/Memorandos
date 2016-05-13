@@ -22,6 +22,7 @@ namespace Datos
        public string fechaF;
        public string recibe;
        public string Nomdpto;
+       public string ci;
 
        Datos.cBaseDatos servicio = new Datos.cBaseDatos();
        
@@ -106,6 +107,21 @@ namespace Datos
             servicio.ActualizarRevision(rev.nrevision, rev.codigocontrol, rev.coddpto, rev.Dinicial, rev.Dfinal, rev.recomendaciones,rev.status, rev.fechaI, rev.recibe, rev.fechaF);
 
         }
+
+       public DataSet listadRfecha(cRevision rev)
+       {
+           return servicio.ListRfecha(rev.fechaI);
+       }
+
+       public DataSet listadRTecnico(cRevision rev)
+       {
+           return servicio.ListRtecnico(rev.ci);
+       }
+
+       public DataSet listadRPendiente()
+       {
+           return servicio.ListRpendiente();
+       }
 
  }
 }

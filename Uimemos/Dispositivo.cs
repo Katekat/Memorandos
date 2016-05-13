@@ -35,13 +35,7 @@ namespace Uimemos
 
             cbTipo.DisplayMember = "Name";
             cbTipo.DataSource = lista;
-            //cbTipo.SelectedIndexChanged += new System.EventHandler(this.cbTipo_SelectedIndexChanged);
-            //this.cbTipo.SelectedIndexChanged += new System.EventHandler(cbTipo_SelectedIndexChanged);
-            //dispo.tipo = cbTipo.Text;
-            //dispo.coddpto = int.Parse(cbTipo.Text);
-            //dispo.caracteristicas = txtCaracteristicas.Text;
-            //dispo.codigoControl = int.Parse(txtCodigocontrol.Text);
-            //dispo.usuario = txtNomuser.Text;
+            
         }
 
 

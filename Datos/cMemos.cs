@@ -40,8 +40,6 @@ namespace Datos
              {
 
                  memos.nmemo = int.Parse(dsresultado.Tables[0].Rows[0]["nmemo"].ToString());
-                
-
                  return memos;
              }
              else
@@ -50,8 +48,16 @@ namespace Datos
              }
 
          }
-      
-       
+
+         public DataSet Obtenermemos()
+         {
+             return servicio.ListMemos();
+         }
+
+         public DataSet listadfecha(cMemos memos)
+         {
+             return servicio.ListMemosFecha(memos.fecha);
+         }
     }
       
       

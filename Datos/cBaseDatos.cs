@@ -222,7 +222,28 @@ namespace Datos
 
         }
 
+        public DataSet BuscarUsuario(string usuario, string pass)
+        {
 
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "select * from administrador where usuario='{0}' and pass='{1}' ";
+            strSentenciaSQL = string.Format(strSentenciaSQL, usuario, pass);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+
+
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
    
         public void ActualizarDepartamento(int codigo, string nombre, string encargado)
         {
@@ -349,6 +370,116 @@ namespace Datos
             return dsConsulta;
 
         }
+
+        public DataSet ListMemos()
+        {
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "ListadoMemos";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
+        public DataSet ListMemosFecha(string Fecha)
+        {
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "ListadoMemosFecha";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            cmdComando.Parameters.Add("@fecha", SqlDbType.Date).Value = Fecha;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
+
+        public DataSet ListRfecha(string fecha)
+        {
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "sprevisionesfecha";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            cmdComando.Parameters.Add("@fecha", SqlDbType.Date).Value = fecha;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+        }
+
+
+        public DataSet ListRtecnico(string cedula)
+        {
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "spTecnicorevision";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            cmdComando.Parameters.Add("@cedula", SqlDbType.VarChar).Value = cedula;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+            
+        }
+
+        public DataSet ListRpendiente()
+        {
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "spRpendientes";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
 
         public DataSet ObtenerDispoinicial()
         {

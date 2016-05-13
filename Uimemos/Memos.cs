@@ -13,9 +13,9 @@ namespace Uimemos
 {
     public partial class Memos : Form
     {
-        int cont = 0;
-        Datos.cMemos memo = new Datos.cMemos();
         
+        Datos.cMemos memo = new Datos.cMemos();
+        cValidar val = new cValidar();
         public Memos()
         {
             
@@ -77,18 +77,26 @@ namespace Uimemos
                 memo.descripcion = txtDescripcion.Text;
                 memo.motivo = txtmotivo.Text;
                 memo.fecha = dateTimePicker1.Value.ToString("yyyyMMdd");
-                memo.InsertarEnBaseDatos(memo);
-                MessageBox.Show("Se ha insertado con éxito", "Memorando", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-                limpiar();
+                 DialogResult resul = MessageBox.Show("¿Esta seguro de los datos?", "Registrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                 if (resul == DialogResult.Yes)
+                 {
+
+                     memo.InsertarEnBaseDatos(memo);
+                     MessageBox.Show("Se ha insertado con éxito", "Memorando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     limpiar();
+                     //reportemorandoo reporte = new reportemorandoo();
+                     ////reporte.fecha = memo.fecha;
+                     FrmReportmemo objform = new FrmReportmemo();
+                     objform.nmemo = memo.nmemo;
+                     objform.ShowDialog();
+                 }
 
 
             }
             else { MessageBox.Show("Todos los campos deben estar llenos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information); }
 
-            rptmemorando reporte = new rptmemorando();
-            reporte.nmemo = memo.nmemo;
-            reporte.ShowDialog();
+            
         }
 
 
@@ -105,32 +113,7 @@ namespace Uimemos
         }
         private void txtdestinatario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            //{
-            //    MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    e.Handled = true;
-            //    return;
-            //}
-
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            
-            else
-            {
-                e.Handled = true;
-            }
-
-            
+            val.sololetras(e);   
         }
         public bool validar()
         {
@@ -154,12 +137,7 @@ namespace Uimemos
 
         private void txtmotivo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            val.sololetras(e);
         }
 
     }

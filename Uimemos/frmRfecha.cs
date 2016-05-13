@@ -28,6 +28,8 @@ namespace Uimemos
             rev.fechaI = dateTimePicker1.Text;
             dataGridView1.DataSource = rev.listadRfecha(rev);
             dataGridView1.DataMember = "consulta";
+
+            
         }
     }
 }

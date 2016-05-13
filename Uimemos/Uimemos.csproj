@@ -11,6 +11,21 @@
     <AssemblyName>Uimemos</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>Uimemos.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -55,6 +69,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cValidar.cs" />
     <Compile Include="departamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +93,48 @@
     </Compile>
     <Compile Include="frmDispDpto.Designer.cs">
       <DependentUpon>frmDispDpto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlistadomemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlistadomemo.Designer.cs">
+      <DependentUpon>frmlistadomemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadomemofecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadomemofecha.Designer.cs">
+      <DependentUpon>frmListadomemofecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportmemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportmemo.Designer.cs">
+      <DependentUpon>FrmReportmemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRfecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRfecha.Designer.cs">
+      <DependentUpon>frmRfecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRlisttecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRlisttecnico.Designer.cs">
+      <DependentUpon>frmRlisttecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRpendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRpendientes.Designer.cs">
+      <DependentUpon>frmRpendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsesion.Designer.cs">
+      <DependentUpon>frmsesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Listado.cs">
       <SubType>Form</SubType>
@@ -91,31 +154,31 @@
     <Compile Include="Listadotecnico.Designer.cs">
       <DependentUpon>Listadotecnico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Memorando.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Memorando.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Memos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Memos.Designer.cs">
       <DependentUpon>Memos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Memosalc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Memosalc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportemorandoo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportemorandoo.Designer.cs">
+      <DependentUpon>reportemorandoo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Revision.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Revision.Designer.cs">
       <DependentUpon>Revision.cs</DependentUpon>
-    </Compile>
-    <Compile Include="rptmemorando.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="rptmemorando.Designer.cs">
-      <DependentUpon>rptmemorando.cs</DependentUpon>
     </Compile>
     <Compile Include="tecnico.cs">
       <SubType>Form</SubType>
@@ -123,6 +186,10 @@
     <Compile Include="tecnico.Designer.cs">
       <DependentUpon>tecnico.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="departamento.resx">
       <DependentUpon>departamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +198,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDispDpto.resx">
       <DependentUpon>frmDispDpto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlistadomemo.resx">
+      <DependentUpon>frmlistadomemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadomemofecha.resx">
+      <DependentUpon>frmListadomemofecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportmemo.resx">
+      <DependentUpon>FrmReportmemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRfecha.resx">
+      <DependentUpon>frmRfecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRlisttecnico.resx">
+      <DependentUpon>frmRlisttecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRpendientes.resx">
+      <DependentUpon>frmRpendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsesion.resx">
+      <DependentUpon>frmsesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listado.resx">
       <DependentUpon>Listado.cs</DependentUpon>
@@ -141,12 +229,12 @@
     <EmbeddedResource Include="Listadotecnico.resx">
       <DependentUpon>Listadotecnico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Memorando.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Memorando.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Memos.resx">
       <DependentUpon>Memos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Memosalc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Memosalc.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,11 +245,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reportemorandoo.resx">
+      <DependentUpon>reportemorandoo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Revision.resx">
       <DependentUpon>Revision.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rptmemorando.resx">
-      <DependentUpon>rptmemorando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tecnico.resx">
       <DependentUpon>tecnico.cs</DependentUpon>
@@ -187,6 +275,23 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

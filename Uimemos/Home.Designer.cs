@@ -198,7 +198,7 @@
             // listadoToolStripMenuItem1
             // 
             this.listadoToolStripMenuItem1.Name = "listadoToolStripMenuItem1";
-            this.listadoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.listadoToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.listadoToolStripMenuItem1.Text = "Listado";
             this.listadoToolStripMenuItem1.Click += new System.EventHandler(this.listadoToolStripMenuItem1_Click);
             // 
@@ -216,26 +216,29 @@
             // porFechaToolStripMenuItem
             // 
             this.porFechaToolStripMenuItem.Name = "porFechaToolStripMenuItem";
-            this.porFechaToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.porFechaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.porFechaToolStripMenuItem.Text = "Por fecha";
+            this.porFechaToolStripMenuItem.Click += new System.EventHandler(this.porFechaToolStripMenuItem_Click);
             // 
             // listadoToolStripMenuItem2
             // 
             this.listadoToolStripMenuItem2.Name = "listadoToolStripMenuItem2";
-            this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(134, 22);
+            this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.listadoToolStripMenuItem2.Text = "Listado";
             // 
             // porTécnicoToolStripMenuItem
             // 
             this.porTécnicoToolStripMenuItem.Name = "porTécnicoToolStripMenuItem";
-            this.porTécnicoToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.porTécnicoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.porTécnicoToolStripMenuItem.Text = "Por técnico";
+            this.porTécnicoToolStripMenuItem.Click += new System.EventHandler(this.porTécnicoToolStripMenuItem_Click);
             // 
             // pendientesToolStripMenuItem
             // 
             this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
-            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pendientesToolStripMenuItem.Text = "Pendientes";
+            this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
             // 
             // memorandoToolStripMenuItem
             // 
@@ -249,14 +252,16 @@
             // listadoToolStripMenuItem3
             // 
             this.listadoToolStripMenuItem3.Name = "listadoToolStripMenuItem3";
-            this.listadoToolStripMenuItem3.Size = new System.Drawing.Size(112, 22);
+            this.listadoToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.listadoToolStripMenuItem3.Text = "Listado";
+            this.listadoToolStripMenuItem3.Click += new System.EventHandler(this.listadoToolStripMenuItem3_Click);
             // 
             // fechaToolStripMenuItem
             // 
             this.fechaToolStripMenuItem.Name = "fechaToolStripMenuItem";
-            this.fechaToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.fechaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fechaToolStripMenuItem.Text = "Fecha";
+            this.fechaToolStripMenuItem.Click += new System.EventHandler(this.fechaToolStripMenuItem_Click);
             // 
             // panel1
             // 

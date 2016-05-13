@@ -14,6 +14,7 @@ namespace Uimemos
     public partial class tecnico : Form
     {
         Datos.cTecnico tec = new Datos.cTecnico();
+        cValidar val = new cValidar();
         public tecnico()
         {
             InitializeComponent();
@@ -151,33 +152,17 @@ namespace Uimemos
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            val.sololetras(e);
         }
 
         private void txtCargo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true;
-                return;
-            }
+            val.sololetras(e);
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-            {
-                //MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                e.Handled = true
-                    ;
-                return;
-            }
+            val.SoloNumeros(e);
         }
 
         public bool validar()

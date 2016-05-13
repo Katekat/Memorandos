@@ -84,8 +84,35 @@ namespace Uimemos
             report.Show();
         }
 
-       
-     
+        private void porFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRfecha report = new frmRfecha();
+            report.Show();
+        }
+
+        private void porTécnicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRlisttecnico report = new frmRlisttecnico();
+            report.Show();
+        }
+
+        private void pendientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRpendientes report = new frmRpendientes();
+            report.Show();
+        }
+
+        private void listadoToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmlistadomemo repor = new frmlistadomemo();
+            repor.Show();
+        }
+
+        private void fechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadomemofecha report = new frmListadomemofecha();
+            report.Show();
+        }
         
     }
 }
