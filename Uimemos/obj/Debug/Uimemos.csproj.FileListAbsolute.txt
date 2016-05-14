@@ -170,3 +170,6 @@ C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.frmlistadomemo
 C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.frmListadomemofecha.resources
 C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.reportemorandoo.resources
 C:\Users\KateF\Source\Repos\Memorandos3\Uimemos\obj\Debug\Uimemos.FrmReportmemo.resources
+C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.pdb
