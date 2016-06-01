@@ -72,59 +72,65 @@
             // 
             // toolHome
             // 
+            this.toolHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolHome.Image = ((System.Drawing.Image)(resources.GetObject("toolHome.Image")));
             this.toolHome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolHome.Name = "toolHome";
-            this.toolHome.Size = new System.Drawing.Size(44, 56);
+            this.toolHome.Size = new System.Drawing.Size(56, 56);
             this.toolHome.Text = "Home";
             this.toolHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolHome.Click += new System.EventHandler(this.toolHome_Click);
             // 
             // toolDispositivo
             // 
+            this.toolDispositivo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolDispositivo.Image = ((System.Drawing.Image)(resources.GetObject("toolDispositivo.Image")));
             this.toolDispositivo.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.toolDispositivo.Name = "toolDispositivo";
-            this.toolDispositivo.Size = new System.Drawing.Size(69, 56);
+            this.toolDispositivo.Size = new System.Drawing.Size(91, 56);
             this.toolDispositivo.Text = "Dispositivo";
             this.toolDispositivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolDispositivo.Click += new System.EventHandler(this.toolDispositivo_Click);
             // 
             // toolTecnico
             // 
+            this.toolTecnico.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTecnico.Image = ((System.Drawing.Image)(resources.GetObject("toolTecnico.Image")));
             this.toolTecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolTecnico.Name = "toolTecnico";
-            this.toolTecnico.Size = new System.Drawing.Size(53, 56);
+            this.toolTecnico.Size = new System.Drawing.Size(66, 56);
             this.toolTecnico.Text = "Técnico";
             this.toolTecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolTecnico.Click += new System.EventHandler(this.toolTecnico_Click);
             // 
             // toolDepartamento
             // 
+            this.toolDepartamento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolDepartamento.Image = ((System.Drawing.Image)(resources.GetObject("toolDepartamento.Image")));
             this.toolDepartamento.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolDepartamento.Name = "toolDepartamento";
-            this.toolDepartamento.Size = new System.Drawing.Size(87, 56);
+            this.toolDepartamento.Size = new System.Drawing.Size(114, 56);
             this.toolDepartamento.Text = "Departamento";
             this.toolDepartamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolRevision
             // 
+            this.toolRevision.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolRevision.Image = ((System.Drawing.Image)(resources.GetObject("toolRevision.Image")));
             this.toolRevision.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolRevision.Name = "toolRevision";
-            this.toolRevision.Size = new System.Drawing.Size(55, 56);
+            this.toolRevision.Size = new System.Drawing.Size(73, 56);
             this.toolRevision.Text = "Revisión";
             this.toolRevision.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolRevision.Click += new System.EventHandler(this.toolRevision_Click);
             // 
             // toolMemos
             // 
+            this.toolMemos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolMemos.Image = ((System.Drawing.Image)(resources.GetObject("toolMemos.Image")));
             this.toolMemos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolMemos.Name = "toolMemos";
-            this.toolMemos.Size = new System.Drawing.Size(51, 56);
+            this.toolMemos.Size = new System.Drawing.Size(66, 56);
             this.toolMemos.Text = "Memos";
             this.toolMemos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolMemos.Click += new System.EventHandler(this.toolMemos_Click);
@@ -151,10 +157,11 @@
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(267, 200);
+            this.btnGuardar.Location = new System.Drawing.Point(278, 225);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(91, 27);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -162,25 +169,29 @@
             // 
             // txtEncdpto
             // 
-            this.txtEncdpto.Location = new System.Drawing.Point(245, 131);
+            this.txtEncdpto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEncdpto.Location = new System.Drawing.Point(256, 154);
             this.txtEncdpto.Name = "txtEncdpto";
-            this.txtEncdpto.Size = new System.Drawing.Size(124, 20);
+            this.txtEncdpto.Size = new System.Drawing.Size(124, 22);
             this.txtEncdpto.TabIndex = 5;
             this.txtEncdpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEncdpto_KeyPress);
             // 
             // txtNomdpto
             // 
-            this.txtNomdpto.Location = new System.Drawing.Point(245, 92);
+            this.txtNomdpto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomdpto.Location = new System.Drawing.Point(256, 100);
             this.txtNomdpto.Name = "txtNomdpto";
-            this.txtNomdpto.Size = new System.Drawing.Size(124, 20);
+            this.txtNomdpto.Size = new System.Drawing.Size(124, 22);
             this.txtNomdpto.TabIndex = 4;
             this.txtNomdpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomdpto_KeyPress);
             // 
             // txtCodigodpto
             // 
-            this.txtCodigodpto.Location = new System.Drawing.Point(245, 45);
+            this.txtCodigodpto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtCodigodpto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigodpto.Location = new System.Drawing.Point(256, 49);
             this.txtCodigodpto.Name = "txtCodigodpto";
-            this.txtCodigodpto.Size = new System.Drawing.Size(124, 20);
+            this.txtCodigodpto.Size = new System.Drawing.Size(124, 22);
             this.txtCodigodpto.TabIndex = 3;
             this.txtCodigodpto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigodpto_KeyDown);
             this.txtCodigodpto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigodpto_KeyPress);
@@ -188,30 +199,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(161, 135);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(161, 158);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 16);
+            this.label4.Size = new System.Drawing.Size(91, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Encargado:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(161, 96);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(161, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nombre:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(161, 49);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(161, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 16);
+            this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Código:";
             // 

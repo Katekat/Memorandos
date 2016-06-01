@@ -104,6 +104,8 @@ namespace Uimemos
                     {
                          txtNomdpto.Text=Dpto.nombre;
                          txtEncdpto.Text= Dpto.encargado;
+                         txtCodigodpto.ReadOnly = true;
+                         limpiar();
                     }
                 }else{
                     MessageBox.Show(" El departamento/división/oficina ya esta registrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -125,6 +125,30 @@ namespace Datos
 
         }
 
+
+        public DataSet Buscarmemo(int pnumero)
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "select * from memos where nmemo='{0}' ";
+            strSentenciaSQL = string.Format(strSentenciaSQL, pnumero);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+
+
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
         //BUSCAR DISPOSITIVO 
 
         public DataSet BuscarDispositivo(int pCodigo)
@@ -156,14 +180,13 @@ namespace Datos
 
             SqlConnection cnnConexion = ObtenerConexion();
 
-            string strSentenciaSQL = "SELECT COUNT(*) as nmemo FROM memos";
+
+            string strSentenciaSQL = "spmemonum";
             strSentenciaSQL = string.Format(strSentenciaSQL);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
-
-
+            cmdComando.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
-
             DataSet dsConsulta = new DataSet();
 
             adpAdapter.Fill(dsConsulta, "consulta");
@@ -280,11 +303,11 @@ namespace Datos
             ccnConexion.Close();
         }
 
-        public void ActualizarMemo(int nmemo, DateTime fecha, string descripcion, string remitente, string destinatario, string motivo)
+        public void ActualizarMemo(string descripcion, string destinatario, string motivo , int nmemo)
         {
             SqlConnection ccnConexion = ObtenerConexion();
-            string strSentenciaSQL = "update memos set fecha='{1}',descripcion='{2}',remitente='{3}',destinatario='{4}',motivo='{5}' where nmemo='{0}'";
-            strSentenciaSQL = string.Format(strSentenciaSQL, strSentenciaSQL, nmemo, fecha, descripcion, remitente, destinatario, motivo);
+            string strSentenciaSQL = "update memos set descripcion='{0}',destinatario='{1}',motivo='{2}' where nmemo='{3}'";
+            strSentenciaSQL = string.Format(strSentenciaSQL, descripcion, destinatario, motivo, nmemo);
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, ccnConexion);
             cmdComando.ExecuteNonQuery();
             ccnConexion.Close();

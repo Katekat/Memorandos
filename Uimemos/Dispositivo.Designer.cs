@@ -77,59 +77,65 @@
             // 
             // toolhome
             // 
+            this.toolhome.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolhome.Image = ((System.Drawing.Image)(resources.GetObject("toolhome.Image")));
             this.toolhome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolhome.Name = "toolhome";
-            this.toolhome.Size = new System.Drawing.Size(44, 56);
+            this.toolhome.Size = new System.Drawing.Size(54, 56);
             this.toolhome.Text = "Home";
             this.toolhome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolhome.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolDispositivo
             // 
+            this.toolDispositivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolDispositivo.Image = ((System.Drawing.Image)(resources.GetObject("toolDispositivo.Image")));
             this.toolDispositivo.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.toolDispositivo.Name = "toolDispositivo";
-            this.toolDispositivo.Size = new System.Drawing.Size(69, 56);
+            this.toolDispositivo.Size = new System.Drawing.Size(87, 56);
             this.toolDispositivo.Text = "Dispositivo";
             this.toolDispositivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // tooltecnico
             // 
+            this.tooltecnico.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tooltecnico.Image = ((System.Drawing.Image)(resources.GetObject("tooltecnico.Image")));
             this.tooltecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tooltecnico.Name = "tooltecnico";
-            this.tooltecnico.Size = new System.Drawing.Size(53, 56);
+            this.tooltecnico.Size = new System.Drawing.Size(64, 56);
             this.tooltecnico.Text = "Técnico";
             this.tooltecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tooltecnico.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolDepartamento
             // 
+            this.toolDepartamento.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolDepartamento.Image = ((System.Drawing.Image)(resources.GetObject("toolDepartamento.Image")));
             this.toolDepartamento.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolDepartamento.Name = "toolDepartamento";
-            this.toolDepartamento.Size = new System.Drawing.Size(87, 56);
+            this.toolDepartamento.Size = new System.Drawing.Size(110, 56);
             this.toolDepartamento.Text = "Departamento";
             this.toolDepartamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolDepartamento.Click += new System.EventHandler(this.Departamento_Click);
             // 
             // toolrevision
             // 
+            this.toolrevision.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolrevision.Image = ((System.Drawing.Image)(resources.GetObject("toolrevision.Image")));
             this.toolrevision.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolrevision.Name = "toolrevision";
-            this.toolrevision.Size = new System.Drawing.Size(55, 56);
+            this.toolrevision.Size = new System.Drawing.Size(68, 56);
             this.toolrevision.Text = "Revisión";
             this.toolrevision.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolrevision.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolmemorando
             // 
+            this.toolmemorando.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolmemorando.Image = ((System.Drawing.Image)(resources.GetObject("toolmemorando.Image")));
             this.toolmemorando.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolmemorando.Name = "toolmemorando";
-            this.toolmemorando.Size = new System.Drawing.Size(51, 56);
+            this.toolmemorando.Size = new System.Drawing.Size(62, 56);
             this.toolmemorando.Text = "Memos";
             this.toolmemorando.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolmemorando.Click += new System.EventHandler(this.toolmemorando_Click);
@@ -150,9 +156,9 @@
             this.paneldispo.Controls.Add(this.carac);
             this.paneldispo.Controls.Add(this.label3);
             this.paneldispo.Controls.Add(this.label2);
-            this.paneldispo.Location = new System.Drawing.Point(202, 157);
+            this.paneldispo.Location = new System.Drawing.Point(108, 157);
             this.paneldispo.Name = "paneldispo";
-            this.paneldispo.Size = new System.Drawing.Size(609, 292);
+            this.paneldispo.Size = new System.Drawing.Size(729, 347);
             this.paneldispo.TabIndex = 1;
             // 
             // BtnGuardar
@@ -160,25 +166,26 @@
             this.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Location = new System.Drawing.Point(174, 252);
+            this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.Location = new System.Drawing.Point(175, 298);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuardar.Size = new System.Drawing.Size(91, 35);
             this.BtnGuardar.TabIndex = 11;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // txtCaracteristicas
             // 
-            this.txtCaracteristicas.Location = new System.Drawing.Point(138, 128);
+            this.txtCaracteristicas.Location = new System.Drawing.Point(138, 153);
             this.txtCaracteristicas.Multiline = true;
             this.txtCaracteristicas.Name = "txtCaracteristicas";
-            this.txtCaracteristicas.Size = new System.Drawing.Size(150, 81);
+            this.txtCaracteristicas.Size = new System.Drawing.Size(274, 81);
             this.txtCaracteristicas.TabIndex = 10;
             // 
             // cbTipo
             // 
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Location = new System.Drawing.Point(138, 90);
+            this.cbTipo.Location = new System.Drawing.Point(138, 109);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(150, 21);
             this.cbTipo.TabIndex = 9;
@@ -186,14 +193,14 @@
             // cbnomdpto
             // 
             this.cbnomdpto.FormattingEnabled = true;
-            this.cbnomdpto.Location = new System.Drawing.Point(138, 60);
+            this.cbnomdpto.Location = new System.Drawing.Point(138, 69);
             this.cbnomdpto.Name = "cbnomdpto";
             this.cbnomdpto.Size = new System.Drawing.Size(150, 21);
             this.cbnomdpto.TabIndex = 8;
             // 
             // txtNomuser
             // 
-            this.txtNomuser.Location = new System.Drawing.Point(138, 219);
+            this.txtNomuser.Location = new System.Drawing.Point(140, 246);
             this.txtNomuser.Name = "txtNomuser";
             this.txtNomuser.Size = new System.Drawing.Size(150, 20);
             this.txtNomuser.TabIndex = 7;
@@ -201,7 +208,7 @@
             // 
             // txtCodigocontrol
             // 
-            this.txtCodigocontrol.Location = new System.Drawing.Point(140, 34);
+            this.txtCodigocontrol.Location = new System.Drawing.Point(140, 31);
             this.txtCodigocontrol.Name = "txtCodigocontrol";
             this.txtCodigocontrol.Size = new System.Drawing.Size(148, 20);
             this.txtCodigocontrol.TabIndex = 6;
@@ -211,30 +218,30 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 223);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 246);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 16);
+            this.label6.Size = new System.Drawing.Size(114, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Nombre (user):";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 90);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 16);
+            this.label5.Size = new System.Drawing.Size(43, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tipo:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 129);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(14, 153);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 16);
+            this.label4.Size = new System.Drawing.Size(118, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Carácteristicas:";
             // 
@@ -249,20 +256,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 62);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(118, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nombre (Dpto):";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 38);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 16);
+            this.label2.Size = new System.Drawing.Size(115, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Código control:";
             // 
@@ -270,10 +277,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(238, 146);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(99, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Dispositivo";
             // 

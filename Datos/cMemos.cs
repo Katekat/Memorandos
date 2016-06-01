@@ -49,6 +49,11 @@ namespace Datos
 
          }
 
+         public void actualizarmemo(cMemos memo)
+         {
+             servicio.ActualizarMemo(memo.descripcion, memo.destinatario, memo.motivo, memo.nmemo);
+         }
+
          public DataSet Obtenermemos()
          {
              return servicio.ListMemos();
@@ -58,6 +63,31 @@ namespace Datos
          {
              return servicio.ListMemosFecha(memos.fecha);
          }
+
+         public cMemos Buscarmemo(int pnumero)
+         {
+             cMemos memo = new cMemos();
+
+             DataSet dsresultado = servicio.Buscarmemo(pnumero);
+
+             if (dsresultado.Tables[0].Rows.Count != 0)
+             {
+                 memo.nmemo = int.Parse(dsresultado.Tables[0].Rows[0]["nmemo"].ToString());
+                 memo.fecha = dsresultado.Tables[0].Rows[0]["fecha"].ToString();
+                 memo.descripcion = dsresultado.Tables[0].Rows[0]["descripcion"].ToString();
+                 memo.remitente = dsresultado.Tables[0].Rows[0]["remitente"].ToString();
+                 memo.destinatario = dsresultado.Tables[0].Rows[0]["destinatario"].ToString();
+                 memo.motivo = dsresultado.Tables[0].Rows[0]["motivo"].ToString();
+                 return memo;
+             }
+             else
+             {
+                 return memo;
+             }
+
+         }
+
+         
     }
       
       

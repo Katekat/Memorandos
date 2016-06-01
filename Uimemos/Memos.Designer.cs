@@ -38,6 +38,9 @@
             this.toolRevision = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panelmemo = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lbDescripcion = new System.Windows.Forms.Label();
@@ -51,6 +54,8 @@
             this.panelfechayhora = new System.Windows.Forms.Panel();
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panelmemo.SuspendLayout();
             this.panelfechayhora.SuspendLayout();
@@ -74,60 +79,66 @@
             // 
             // toolHome
             // 
+            this.toolHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolHome.Image = ((System.Drawing.Image)(resources.GetObject("toolHome.Image")));
             this.toolHome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolHome.Name = "toolHome";
-            this.toolHome.Size = new System.Drawing.Size(44, 56);
+            this.toolHome.Size = new System.Drawing.Size(56, 56);
             this.toolHome.Text = "Home";
             this.toolHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolHome.Click += new System.EventHandler(this.toolHome_Click);
             // 
             // toolDispositivo
             // 
+            this.toolDispositivo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolDispositivo.Image = ((System.Drawing.Image)(resources.GetObject("toolDispositivo.Image")));
             this.toolDispositivo.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.toolDispositivo.Name = "toolDispositivo";
-            this.toolDispositivo.Size = new System.Drawing.Size(69, 56);
+            this.toolDispositivo.Size = new System.Drawing.Size(91, 56);
             this.toolDispositivo.Text = "Dispositivo";
             this.toolDispositivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolDispositivo.Click += new System.EventHandler(this.toolDispositivo_Click);
             // 
             // toolTecnico
             // 
+            this.toolTecnico.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolTecnico.Image = ((System.Drawing.Image)(resources.GetObject("toolTecnico.Image")));
             this.toolTecnico.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolTecnico.Name = "toolTecnico";
-            this.toolTecnico.Size = new System.Drawing.Size(53, 56);
+            this.toolTecnico.Size = new System.Drawing.Size(66, 56);
             this.toolTecnico.Text = "Técnico";
             this.toolTecnico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolTecnico.Click += new System.EventHandler(this.toolTecnico_Click);
             // 
             // toolDepartamento
             // 
+            this.toolDepartamento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolDepartamento.Image = ((System.Drawing.Image)(resources.GetObject("toolDepartamento.Image")));
             this.toolDepartamento.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolDepartamento.Name = "toolDepartamento";
-            this.toolDepartamento.Size = new System.Drawing.Size(87, 56);
+            this.toolDepartamento.Size = new System.Drawing.Size(114, 56);
             this.toolDepartamento.Text = "Departamento";
             this.toolDepartamento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolDepartamento.Click += new System.EventHandler(this.toolDepartamento_Click);
             // 
             // toolRevision
             // 
+            this.toolRevision.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolRevision.Image = ((System.Drawing.Image)(resources.GetObject("toolRevision.Image")));
             this.toolRevision.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolRevision.Name = "toolRevision";
-            this.toolRevision.Size = new System.Drawing.Size(55, 56);
+            this.toolRevision.Size = new System.Drawing.Size(73, 56);
             this.toolRevision.Text = "Revisión";
             this.toolRevision.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolRevision.Click += new System.EventHandler(this.toolRevision_Click);
             // 
             // toolStripButton4
             // 
+            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(51, 56);
+            this.toolStripButton4.Size = new System.Drawing.Size(66, 56);
             this.toolStripButton4.Text = "Memos";
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -135,6 +146,8 @@
             // 
             this.panelmemo.BackColor = System.Drawing.Color.Transparent;
             this.panelmemo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelmemo.Controls.Add(this.label4);
+            this.panelmemo.Controls.Add(this.label3);
             this.panelmemo.Controls.Add(this.btnGuardar);
             this.panelmemo.Controls.Add(this.txtDescripcion);
             this.panelmemo.Controls.Add(this.lbDescripcion);
@@ -144,19 +157,55 @@
             this.panelmemo.Controls.Add(this.txtmotivo);
             this.panelmemo.Controls.Add(this.txtdestinatario);
             this.panelmemo.Controls.Add(this.lbDestinatario);
-            this.panelmemo.Location = new System.Drawing.Point(45, 120);
+            this.panelmemo.Location = new System.Drawing.Point(45, 172);
             this.panelmemo.Name = "panelmemo";
-            this.panelmemo.Size = new System.Drawing.Size(883, 366);
+            this.panelmemo.Size = new System.Drawing.Size(883, 408);
             this.panelmemo.TabIndex = 2;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AutoEllipsis = true;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(515, 111);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(53, 39);
+            this.btnBuscar.TabIndex = 35;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(344, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 18);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Número:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(432, 123);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(68, 20);
+            this.textBox1.TabIndex = 9;
             // 
             // btnGuardar
             // 
             this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Location = new System.Drawing.Point(317, 313);
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(350, 364);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(91, 30);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Generar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -166,7 +215,8 @@
             // 
             this.txtDescripcion.BackColor = System.Drawing.SystemColors.Info;
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(156, 161);
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(172, 203);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(416, 116);
@@ -175,17 +225,17 @@
             // lbDescripcion
             // 
             this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDescripcion.Location = new System.Drawing.Point(67, 165);
+            this.lbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDescripcion.Location = new System.Drawing.Point(67, 203);
             this.lbDescripcion.Name = "lbDescripcion";
-            this.lbDescripcion.Size = new System.Drawing.Size(83, 16);
+            this.lbDescripcion.Size = new System.Drawing.Size(96, 20);
             this.lbDescripcion.TabIndex = 6;
             this.lbDescripcion.Text = "Descripción:";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dateTimePicker1.Location = new System.Drawing.Point(156, 122);
+            this.dateTimePicker1.Location = new System.Drawing.Point(172, 151);
             this.dateTimePicker1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(2016, 4, 14, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -196,34 +246,36 @@
             // lbfecha
             // 
             this.lbfecha.AutoSize = true;
-            this.lbfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbfecha.Location = new System.Drawing.Point(67, 126);
+            this.lbfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfecha.Location = new System.Drawing.Point(68, 152);
             this.lbfecha.Name = "lbfecha";
-            this.lbfecha.Size = new System.Drawing.Size(49, 16);
+            this.lbfecha.Size = new System.Drawing.Size(58, 20);
             this.lbfecha.TabIndex = 4;
             this.lbfecha.Text = "Fecha:";
             // 
             // lbmotivo
             // 
             this.lbmotivo.AutoSize = true;
-            this.lbmotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbmotivo.Location = new System.Drawing.Point(67, 92);
+            this.lbmotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbmotivo.Location = new System.Drawing.Point(68, 103);
             this.lbmotivo.Name = "lbmotivo";
-            this.lbmotivo.Size = new System.Drawing.Size(51, 16);
+            this.lbmotivo.Size = new System.Drawing.Size(59, 20);
             this.lbmotivo.TabIndex = 3;
             this.lbmotivo.Text = "Motivo:";
             // 
             // txtmotivo
             // 
-            this.txtmotivo.Location = new System.Drawing.Point(156, 88);
+            this.txtmotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmotivo.Location = new System.Drawing.Point(169, 103);
             this.txtmotivo.Name = "txtmotivo";
-            this.txtmotivo.Size = new System.Drawing.Size(416, 20);
+            this.txtmotivo.Size = new System.Drawing.Size(416, 24);
             this.txtmotivo.TabIndex = 2;
             this.txtmotivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmotivo_KeyPress);
             // 
             // txtdestinatario
             // 
-            this.txtdestinatario.Location = new System.Drawing.Point(156, 35);
+            this.txtdestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdestinatario.Location = new System.Drawing.Point(169, 49);
             this.txtdestinatario.Multiline = true;
             this.txtdestinatario.Name = "txtdestinatario";
             this.txtdestinatario.Size = new System.Drawing.Size(416, 34);
@@ -233,10 +285,10 @@
             // lbDestinatario
             // 
             this.lbDestinatario.AutoSize = true;
-            this.lbDestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDestinatario.Location = new System.Drawing.Point(67, 35);
+            this.lbDestinatario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDestinatario.Location = new System.Drawing.Point(64, 49);
             this.lbDestinatario.Name = "lbDestinatario";
-            this.lbDestinatario.Size = new System.Drawing.Size(83, 16);
+            this.lbDestinatario.Size = new System.Drawing.Size(99, 20);
             this.lbDestinatario.TabIndex = 0;
             this.lbDestinatario.Text = "Destinatario:";
             // 
@@ -245,7 +297,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 107);
+            this.label1.Location = new System.Drawing.Point(76, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 24);
             this.label1.TabIndex = 3;
@@ -274,14 +326,35 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(178, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(328, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "label4";
+            // 
             // Memos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(984, 563);
+            this.ClientSize = new System.Drawing.Size(984, 609);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panelfechayhora);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panelmemo);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Memos";
@@ -322,5 +395,10 @@
         private System.Windows.Forms.Panel panelfechayhora;
         private System.Windows.Forms.Label hora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

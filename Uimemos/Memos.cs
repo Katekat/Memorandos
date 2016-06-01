@@ -14,6 +14,7 @@ namespace Uimemos
     public partial class Memos : Form
     {
         
+        
         Datos.cMemos memo = new Datos.cMemos();
         cValidar val = new cValidar();
         public Memos()
@@ -69,33 +70,87 @@ namespace Uimemos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (validar() == false)
+            DateTime dd = DateTime.Now;
+            string fechahoy = dd.ToString("dd/MM/yyyy 0:00:00");
+            label3.Text = fechahoy;
+            label4.Text = memo.fecha;
+            if(string.IsNullOrEmpty(textBox1.Text))
             {
-                memo= memo.obtnum();
-                memo.nmemo = (memo.nmemo)+1;
-                memo.destinatario = txtdestinatario.Text;
-                memo.descripcion = txtDescripcion.Text;
-                memo.motivo = txtmotivo.Text;
-                memo.fecha = dateTimePicker1.Value.ToString("yyyyMMdd");
+                if (validar() == false)
+                {
+                    memo = memo.obtnum();
+                    memo.nmemo = (memo.nmemo) + 1;
+                    memo.destinatario = txtdestinatario.Text;
+                    memo.descripcion = txtDescripcion.Text;
+                    memo.motivo = txtmotivo.Text;
+                    memo.fecha = dateTimePicker1.Value.ToString("yyyyMMdd");
+
+                    DialogResult resul = MessageBox.Show("¿Esta seguro de los datos?", "Registrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (resul == DialogResult.Yes)
+                    {
+
+                        memo.InsertarEnBaseDatos(memo);
+                        MessageBox.Show("Se ha insertado con éxito", "Memorando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiar();
+                        //reportemorandoo reporte = new reportemorandoo();
+                        ////reporte.fecha = memo.fecha;
+                        FrmReportmemo objform = new FrmReportmemo();
+                        objform.nmemo = memo.nmemo;
+                        objform.ShowDialog();
+                    }
+
+
+                }
+                else { MessageBox.Show("Todos los campos deben estar llenos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            }
+            else
+            {
                 
-                 DialogResult resul = MessageBox.Show("¿Esta seguro de los datos?", "Registrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                 if (resul == DialogResult.Yes)
-                 {
+                if (memo.fecha != fechahoy)
+                {
+                    MessageBox.Show("El memo que intenta modificar no fue generado el día de hoy", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                     memo.InsertarEnBaseDatos(memo);
-                     MessageBox.Show("Se ha insertado con éxito", "Memorando", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     limpiar();
-                     //reportemorandoo reporte = new reportemorandoo();
-                     ////reporte.fecha = memo.fecha;
-                     FrmReportmemo objform = new FrmReportmemo();
-                     objform.nmemo = memo.nmemo;
-                     objform.ShowDialog();
-                 }
+                }
+                else
+                {
+                    dateTimePicker1.Text = memo.fecha.ToString();
+                    if (memo.descripcion != txtDescripcion.Text || memo.destinatario != txtdestinatario.Text || memo.motivo != txtmotivo.Text)
+                    {
 
+                        DialogResult resul = MessageBox.Show("¿Desea Cambiar los datos del Memorando?", "Actualizacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (resul == DialogResult.Yes)
+                        {
+                            if (validar() == false)
+                            {
+                                memo.destinatario = txtdestinatario.Text;
+                                memo.descripcion = txtDescripcion.Text;
+                                memo.motivo = txtmotivo.Text;
+                                memo.actualizarmemo(memo);
+                                MessageBox.Show("Se han actualizado los datos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                               
+                                limpiar();
+                                //reportemorandoo reporte = new reportemorandoo();
+                                ////reporte.fecha = memo.fecha;
+                                FrmReportmemo objform = new FrmReportmemo();
+                                objform.nmemo = memo.nmemo;
+                                objform.ShowDialog();
+                            }
+                            else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+                        }
+                        else
+                        {
+                            txtDescripcion.Text = memo.descripcion;
+                            txtdestinatario.Text = memo.destinatario;
+                            txtmotivo.Text = memo.motivo;
+                            textBox1.Clear();
+                            limpiar();
+                        }
+                    }
+                }
 
             }
-            else { MessageBox.Show("Todos los campos deben estar llenos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-
             
         }
 
@@ -138,6 +193,19 @@ namespace Uimemos
         private void txtmotivo_KeyPress(object sender, KeyPressEventArgs e)
         {
             val.sololetras(e);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           memo = memo.Buscarmemo(int.Parse(textBox1.Text));
+            txtdestinatario.Text = memo.destinatario;
+            txtDescripcion.Text = memo.descripcion.ToString();
+            txtmotivo.Text = memo.motivo;
+
+            DateTime dd = DateTime.Now;
+            string fechahoy = dd.ToString("dd/MM/yyyy 0:00:00");
+            label3.Text = fechahoy;
+            label4.Text = memo.fecha;
         }
 
     }

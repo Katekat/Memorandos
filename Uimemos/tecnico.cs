@@ -119,8 +119,10 @@ namespace Uimemos
                     }
                     else
                     {
+                        txtCedula.ReadOnly = true;
                         txtNombre.Text = tec.nombre;
                         txtCargo.Text = tec.cargo;
+                        limpiar();
                     }
                 }
                 else
