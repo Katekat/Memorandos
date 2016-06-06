@@ -23,5 +23,10 @@ namespace Uimemos
             objreporte.SetParameterValue("@nmemo", nmemo);
             crystalReportViewer2.ReportSource = objreporte;
         }
+
+        private void crystalReportViewer2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

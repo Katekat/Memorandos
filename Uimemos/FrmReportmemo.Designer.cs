@@ -42,6 +42,7 @@
             this.crystalReportViewer2.Name = "crystalReportViewer2";
             this.crystalReportViewer2.Size = new System.Drawing.Size(763, 465);
             this.crystalReportViewer2.TabIndex = 0;
+            this.crystalReportViewer2.Load += new System.EventHandler(this.crystalReportViewer2_Load);
             // 
             // FrmReportmemo
             // 

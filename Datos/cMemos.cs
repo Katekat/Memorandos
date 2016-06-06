@@ -59,9 +59,9 @@ namespace Datos
              return servicio.ListMemos();
          }
 
-         public DataSet listadfecha(cMemos memos)
+         public DataSet listadfecha(string DesdeFecha , string HastaFecha)
          {
-             return servicio.ListMemosFecha(memos.fecha);
+             return servicio.ListMemosFecha(DesdeFecha, HastaFecha);
          }
 
          public cMemos Buscarmemo(int pnumero)

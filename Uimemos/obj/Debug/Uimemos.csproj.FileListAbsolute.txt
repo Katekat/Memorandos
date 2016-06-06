@@ -186,7 +186,6 @@ C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.frmListado
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.FrmReportmemo.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.frmRfecha.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.frmRlisttecnico.resources
-C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.frmRpendientes.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.frmsesion.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.Listado.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.Home.resources
@@ -197,3 +196,4 @@ C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.reportemor
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.Revision.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.tecnico.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
+C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.frmRlistado.resources

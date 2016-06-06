@@ -124,11 +124,11 @@
     <Compile Include="frmRlisttecnico.Designer.cs">
       <DependentUpon>frmRlisttecnico.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRpendientes.cs">
+    <Compile Include="frmRlistado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRpendientes.Designer.cs">
-      <DependentUpon>frmRpendientes.cs</DependentUpon>
+    <Compile Include="frmRlistado.Designer.cs">
+      <DependentUpon>frmRlistado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsesion.cs">
       <SubType>Form</SubType>
@@ -214,8 +214,8 @@
     <EmbeddedResource Include="frmRlisttecnico.resx">
       <DependentUpon>frmRlisttecnico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRpendientes.resx">
-      <DependentUpon>frmRpendientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmRlistado.resx">
+      <DependentUpon>frmRlistado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsesion.resx">
       <DependentUpon>frmsesion.cs</DependentUpon>

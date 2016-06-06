@@ -118,11 +118,21 @@ namespace Datos
            return servicio.ListRtecnico(rev.ci);
        }
 
-       public DataSet listadRPendiente()
+       public DataSet listadRPendiente(cRevision rev)
        {
-           return servicio.ListRpendiente();
+           return servicio.ListRpendiente(rev.status);
        }
 
+       public DataSet listadoRevisión()
+       {
+           return servicio.listadoRevision();
+       }
+
+       public DataSet TotalReparado()
+       {
+           
+           return servicio.Cantidadreparada();
+       }
  }
 }
 

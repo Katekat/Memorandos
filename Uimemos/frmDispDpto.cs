@@ -13,6 +13,7 @@ namespace Uimemos
     public partial class frmDispDpto : Form
     {
         Datos.cDispositivo dispo = new Datos.cDispositivo();
+        Datos.cDepartamento dpto = new Datos.cDepartamento();
         public frmDispDpto()
         {
             InitializeComponent();
@@ -22,6 +23,20 @@ namespace Uimemos
         {
             listado.DataSource = dispo.listadodispdpto();
             listado.DataMember="consulta";
+        }
+
+        private void txtnomDpto_KeyUp(object sender, KeyEventArgs e)
+        {
+            dpto.nombre = e.KeyCode.ToString();
+            listado.DataSource = dpto.obtnerfiltronombre(dpto);
+            listado.DataMember = "consulta";
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dpto.nombre = txtnomDpto.Text;
+            listado.DataSource = dpto.obtnerfiltronombre(dpto);
+            listado.DataMember = "consulta";
         }
 
        

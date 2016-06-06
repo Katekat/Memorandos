@@ -47,7 +47,6 @@
             this.porFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.porTécnicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memorandoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.fechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -214,8 +213,7 @@
             this.revisionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.porFechaToolStripMenuItem,
             this.listadoToolStripMenuItem2,
-            this.porTécnicoToolStripMenuItem,
-            this.pendientesToolStripMenuItem});
+            this.porTécnicoToolStripMenuItem});
             this.revisionToolStripMenuItem.Name = "revisionToolStripMenuItem";
             this.revisionToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.revisionToolStripMenuItem.Text = "Revision";
@@ -232,6 +230,7 @@
             this.listadoToolStripMenuItem2.Name = "listadoToolStripMenuItem2";
             this.listadoToolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
             this.listadoToolStripMenuItem2.Text = "Listado";
+            this.listadoToolStripMenuItem2.Click += new System.EventHandler(this.listadoToolStripMenuItem2_Click);
             // 
             // porTécnicoToolStripMenuItem
             // 
@@ -239,13 +238,6 @@
             this.porTécnicoToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.porTécnicoToolStripMenuItem.Text = "Por técnico";
             this.porTécnicoToolStripMenuItem.Click += new System.EventHandler(this.porTécnicoToolStripMenuItem_Click);
-            // 
-            // pendientesToolStripMenuItem
-            // 
-            this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
-            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
-            this.pendientesToolStripMenuItem.Text = "Pendientes";
-            this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
             // 
             // memorandoToolStripMenuItem
             // 
@@ -455,7 +447,6 @@
         private System.Windows.Forms.ToolStripMenuItem porFechaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem porTécnicoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pendientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem memorandoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem fechaToolStripMenuItem;

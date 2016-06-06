@@ -131,7 +131,7 @@ namespace Datos
 
             SqlConnection cnnConexion = ObtenerConexion();
 
-            string strSentenciaSQL = "select * from memos where nmemo='{0}' ";
+            string strSentenciaSQL = "select * from memos where nmemo='{0}' and fecha = CONVERT (date, GETDATE()) ";
             strSentenciaSQL = string.Format(strSentenciaSQL, pnumero);
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
@@ -355,7 +355,6 @@ namespace Datos
 
         }
 
-        
         public void InsertarRevision(int nrevision, int codigocontrol, int coddpto, string Dinicial, string Dfinal, string recomendaciones, string status, string fechaI, string recibe, string fechaF)
         {
             SqlConnection cnnConexion = ObtenerConexion();
@@ -369,7 +368,6 @@ namespace Datos
             cnnConexion.Close();
 
         }
-
 
         public DataSet ObtenerDispo(string txtuser)
         {
@@ -415,7 +413,7 @@ namespace Datos
 
         }
 
-        public DataSet ListMemosFecha(string Fecha)
+        public DataSet ListMemosFecha(string DesdeFecha, string HastaFecha)
         {
             SqlConnection cnnConexion = ObtenerConexion();
 
@@ -424,7 +422,8 @@ namespace Datos
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
             cmdComando.CommandType = CommandType.StoredProcedure;
-            cmdComando.Parameters.Add("@fecha", SqlDbType.Date).Value = Fecha;
+            cmdComando.Parameters.Add("@fechadesde", SqlDbType.Date).Value = DesdeFecha;
+            cmdComando.Parameters.Add("@fechahasta", SqlDbType.Date).Value = HastaFecha;
             SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
 
             DataSet dsConsulta = new DataSet();
@@ -482,7 +481,7 @@ namespace Datos
             
         }
 
-        public DataSet ListRpendiente()
+        public DataSet ListRpendiente(string estatus)
         {
             SqlConnection cnnConexion = ObtenerConexion();
 
@@ -491,6 +490,7 @@ namespace Datos
 
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
             cmdComando.CommandType = CommandType.StoredProcedure;
+            cmdComando.Parameters.Add("@estatus", SqlDbType.VarChar).Value = estatus;
             SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
 
             DataSet dsConsulta = new DataSet();
@@ -523,7 +523,66 @@ namespace Datos
             return dsConsulta;
         }
 
+        public DataSet listadoRevision()
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+            string strSentenciaSQL = "select * from revision";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+        }
+
+
+        public DataSet Cantidadreparada()
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+            string strSentenciaSQL = "select count(*) As Cantidad from revision where estatus='Reparado'";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+        }
+
         public DataSet ObtenerDispdpto()
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+            string strSentenciaSQL = "splistadodispdptoinicial";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            cmdComando.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
+        public DataSet ObtenerDispdptofiltro(string nombredpto)
         {
 
             SqlConnection cnnConexion = ObtenerConexion();
@@ -531,6 +590,7 @@ namespace Datos
             strSentenciaSQL = string.Format(strSentenciaSQL);
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
             cmdComando.CommandType = CommandType.StoredProcedure;
+            cmdComando.Parameters.Add("@nombDpto", SqlDbType.VarChar).Value = nombredpto;
             SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
 
             DataSet dsConsulta = new DataSet();

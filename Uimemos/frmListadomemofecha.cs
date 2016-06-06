@@ -20,9 +20,24 @@ namespace Uimemos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            memo.fecha = dateTimePicker1.Text;
-            dataGridView1.DataSource = memo.listadfecha(memo);
-            dataGridView1.DataMember = "consulta";
+            if (Fdesde.Value <= Fhasta.Value)
+            {
+
+                dataGridView1.DataSource = memo.listadfecha(Fdesde.Text, Fhasta.Text);
+                dataGridView1.DataMember = "consulta";
+
+                if (dataGridView1.DataSource.Equals(null))
+                {
+                    MessageBox.Show("No se ha encontrado ningún memo en estas fechas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } 
+
+            }
+            else
+            {
+                MessageBox.Show("La fecha final, debe ser mayor a la inicial",  "Aviso" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            
         }
     }
 }

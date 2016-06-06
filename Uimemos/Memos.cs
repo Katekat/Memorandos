@@ -83,7 +83,7 @@ namespace Uimemos
                     memo.destinatario = txtdestinatario.Text;
                     memo.descripcion = txtDescripcion.Text;
                     memo.motivo = txtmotivo.Text;
-                    memo.fecha = dateTimePicker1.Value.ToString("yyyyMMdd");
+                    memo.fecha = dateTimePicker1.Value.ToString("yyyy/MM/dd");
 
                     DialogResult resul = MessageBox.Show("¿Esta seguro de los datos?", "Registrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (resul == DialogResult.Yes)
@@ -92,11 +92,13 @@ namespace Uimemos
                         memo.InsertarEnBaseDatos(memo);
                         MessageBox.Show("Se ha insertado con éxito", "Memorando", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limpiar();
-                        //reportemorandoo reporte = new reportemorandoo();
-                        ////reporte.fecha = memo.fecha;
-                        FrmReportmemo objform = new FrmReportmemo();
-                        objform.nmemo = memo.nmemo;
-                        objform.ShowDialog();
+                        reportemorandoo reporte = new reportemorandoo();
+                        reporte.nmemo = memo.nmemo;
+                        reporte.fecha = memo.fecha;
+                        reporte.ShowDialog();
+                        //FrmReportmemo objform = new FrmReportmemo();
+                        //objform.nmemo = memo.nmemo;
+                        //objform.ShowDialog();
                     }
 
 
@@ -130,11 +132,13 @@ namespace Uimemos
 
                                
                                 limpiar();
-                                //reportemorandoo reporte = new reportemorandoo();
-                                ////reporte.fecha = memo.fecha;
-                                FrmReportmemo objform = new FrmReportmemo();
-                                objform.nmemo = memo.nmemo;
-                                objform.ShowDialog();
+                                reportemorandoo reporte = new reportemorandoo();
+                                reporte.nmemo = memo.nmemo;
+                                reporte.fecha = memo.fecha;
+                                reporte.ShowDialog();
+                                //FrmReportmemo objform = new FrmReportmemo();
+                                //objform.nmemo = memo.nmemo;
+                                //objform.ShowDialog();
                             }
                             else { MessageBox.Show("Debe llenar los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
@@ -197,11 +201,22 @@ namespace Uimemos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           memo = memo.Buscarmemo(int.Parse(textBox1.Text));
-            txtdestinatario.Text = memo.destinatario;
-            txtDescripcion.Text = memo.descripcion.ToString();
-            txtmotivo.Text = memo.motivo;
+            
+            memo = memo.Buscarmemo(int.Parse(textBox1.Text));
+        
+            if (memo.nmemo==0)
+            {
+                MessageBox.Show("Número de memo no existe", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                
+            }
+            else{
+                txtdestinatario.Text = memo.destinatario;
+                txtDescripcion.Text = memo.descripcion.ToString();
+                txtmotivo.Text = memo.motivo;
+
+            }            
+            
             DateTime dd = DateTime.Now;
             string fechahoy = dd.ToString("dd/MM/yyyy 0:00:00");
             label3.Text = fechahoy;

@@ -54,5 +54,10 @@ namespace Datos
 
 
        }
+
+       public DataSet obtnerfiltronombre(cDepartamento dpto)
+       {
+           return servicio.ObtenerDispdptofiltro(dpto.nombre);
+       }
     }
 }

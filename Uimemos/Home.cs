@@ -98,7 +98,7 @@ namespace Uimemos
 
         private void pendientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRpendientes report = new frmRpendientes();
+            frmRlistado report = new frmRlistado();
             report.Show();
         }
 
@@ -111,6 +111,12 @@ namespace Uimemos
         private void fechaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListadomemofecha report = new frmListadomemofecha();
+            report.Show();
+        }
+
+        private void listadoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmRlistado report = new frmRlistado();
             report.Show();
         }
         
