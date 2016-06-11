@@ -37,22 +37,25 @@
             this.toolDpto = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.panelRevision = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.cbnom3 = new System.Windows.Forms.ComboBox();
-            this.nomdpto = new System.Windows.Forms.ComboBox();
+            this.cbnomdpto = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtNomuser = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.cbnom2 = new System.Windows.Forms.ComboBox();
-            this.cbstatus = new System.Windows.Forms.ComboBox();
+            this.txtCaracteristicas = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.cbstatus = new System.Windows.Forms.ComboBox();
             this.fechasalida = new System.Windows.Forms.DateTimePicker();
             this.txtFechaen = new System.Windows.Forms.DateTimePicker();
-            this.cbnom1 = new System.Windows.Forms.ComboBox();
             this.txtrecomendaciones = new System.Windows.Forms.TextBox();
             this.txtdiagfinal = new System.Windows.Forms.TextBox();
             this.txtdiagnini = new System.Windows.Forms.TextBox();
             this.txtCodigocontrol = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -66,6 +69,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelfechayhora = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
@@ -82,7 +86,8 @@
             this.toolStripButton2,
             this.toolDpto,
             this.toolStripButton3,
-            this.toolStripButton4});
+            this.toolStripButton4,
+            this.toolStripButton6});
             this.toolStrip1.Name = "toolStrip1";
             // 
             // toolStripButton5
@@ -120,25 +125,33 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.toolStripButton6, "toolStripButton6");
+            this.toolStripButton6.Name = "toolStripButton6";
+            // 
             // panelRevision
             // 
             this.panelRevision.BackColor = System.Drawing.Color.Transparent;
             this.panelRevision.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelRevision.Controls.Add(this.btnGuardar);
-            this.panelRevision.Controls.Add(this.cbnom3);
-            this.panelRevision.Controls.Add(this.nomdpto);
+            this.panelRevision.Controls.Add(this.cbnomdpto);
+            this.panelRevision.Controls.Add(this.label15);
+            this.panelRevision.Controls.Add(this.txtNomuser);
             this.panelRevision.Controls.Add(this.label14);
-            this.panelRevision.Controls.Add(this.cbnom2);
-            this.panelRevision.Controls.Add(this.cbstatus);
+            this.panelRevision.Controls.Add(this.txtCaracteristicas);
             this.panelRevision.Controls.Add(this.label13);
+            this.panelRevision.Controls.Add(this.cbTipo);
+            this.panelRevision.Controls.Add(this.label12);
+            this.panelRevision.Controls.Add(this.checkedListBox1);
+            this.panelRevision.Controls.Add(this.btnGuardar);
+            this.panelRevision.Controls.Add(this.cbstatus);
             this.panelRevision.Controls.Add(this.fechasalida);
             this.panelRevision.Controls.Add(this.txtFechaen);
-            this.panelRevision.Controls.Add(this.cbnom1);
             this.panelRevision.Controls.Add(this.txtrecomendaciones);
             this.panelRevision.Controls.Add(this.txtdiagfinal);
             this.panelRevision.Controls.Add(this.txtdiagnini);
             this.panelRevision.Controls.Add(this.txtCodigocontrol);
-            this.panelRevision.Controls.Add(this.label12);
             this.panelRevision.Controls.Add(this.label9);
             this.panelRevision.Controls.Add(this.panel2);
             this.panelRevision.Controls.Add(this.label11);
@@ -153,6 +166,55 @@
             resources.ApplyResources(this.panelRevision, "panelRevision");
             this.panelRevision.Name = "panelRevision";
             // 
+            // cbnomdpto
+            // 
+            this.cbnomdpto.FormattingEnabled = true;
+            resources.ApplyResources(this.cbnomdpto, "cbnomdpto");
+            this.cbnomdpto.Name = "cbnomdpto";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // txtNomuser
+            // 
+            resources.ApplyResources(this.txtNomuser, "txtNomuser");
+            this.txtNomuser.Name = "txtNomuser";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // txtCaracteristicas
+            // 
+            resources.ApplyResources(this.txtCaracteristicas, "txtCaracteristicas");
+            this.txtCaracteristicas.Name = "txtCaracteristicas";
+            this.txtCaracteristicas.TextChanged += new System.EventHandler(this.txtCaracteristicas_TextChanged);
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // cbTipo
+            // 
+            this.cbTipo.FormattingEnabled = true;
+            resources.ApplyResources(this.cbTipo, "cbTipo");
+            this.cbTipo.Name = "cbTipo";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.checkedListBox1, "checkedListBox1");
+            this.checkedListBox1.Name = "checkedListBox1";
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
@@ -163,39 +225,12 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // cbnom3
-            // 
-            this.cbnom3.FormattingEnabled = true;
-            resources.ApplyResources(this.cbnom3, "cbnom3");
-            this.cbnom3.Name = "cbnom3";
-            // 
-            // nomdpto
-            // 
-            this.nomdpto.FormattingEnabled = true;
-            resources.ApplyResources(this.nomdpto, "nomdpto");
-            this.nomdpto.Name = "nomdpto";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // cbnom2
-            // 
-            this.cbnom2.FormattingEnabled = true;
-            resources.ApplyResources(this.cbnom2, "cbnom2");
-            this.cbnom2.Name = "cbnom2";
-            // 
             // cbstatus
             // 
             this.cbstatus.FormattingEnabled = true;
             resources.ApplyResources(this.cbstatus, "cbstatus");
             this.cbstatus.Name = "cbstatus";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            this.cbstatus.TextChanged += new System.EventHandler(this.cbstatus_TextChanged);
             // 
             // fechasalida
             // 
@@ -208,12 +243,6 @@
             this.txtFechaen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.txtFechaen, "txtFechaen");
             this.txtFechaen.Name = "txtFechaen";
-            // 
-            // cbnom1
-            // 
-            this.cbnom1.FormattingEnabled = true;
-            resources.ApplyResources(this.cbnom1, "cbnom1");
-            this.cbnom1.Name = "cbnom1";
             // 
             // txtrecomendaciones
             // 
@@ -235,12 +264,8 @@
             this.txtCodigocontrol.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.txtCodigocontrol, "txtCodigocontrol");
             this.txtCodigocontrol.Name = "txtCodigocontrol";
+            this.txtCodigocontrol.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigocontrol_KeyDown);
             this.txtCodigocontrol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigocontrol_KeyPress);
-            // 
-            // label12
-            // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
             // 
             // label9
             // 
@@ -308,8 +333,16 @@
             // 
             resources.ApplyResources(this.panelfechayhora, "panelfechayhora");
             this.panelfechayhora.BackColor = System.Drawing.Color.Transparent;
+            this.panelfechayhora.Controls.Add(this.linkLabel1);
             this.panelfechayhora.Controls.Add(this.hora);
             this.panelfechayhora.Name = "panelfechayhora";
+            // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // hora
             // 
@@ -329,6 +362,7 @@
             this.Controls.Add(this.panelRevision);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Revision";
+            this.Load += new System.EventHandler(this.Revision_Load_1);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelRevision.ResumeLayout(false);
@@ -350,9 +384,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.Panel panelRevision;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -366,19 +397,27 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker fechasalida;
         private System.Windows.Forms.DateTimePicker txtFechaen;
-        private System.Windows.Forms.ComboBox cbnom1;
         private System.Windows.Forms.TextBox txtrecomendaciones;
         private System.Windows.Forms.TextBox txtdiagfinal;
         private System.Windows.Forms.TextBox txtdiagnini;
         private System.Windows.Forms.TextBox txtCodigocontrol;
-        private System.Windows.Forms.ComboBox cbnom3;
-        private System.Windows.Forms.ComboBox cbnom2;
-        private System.Windows.Forms.ComboBox nomdpto;
         private System.Windows.Forms.ComboBox cbstatus;
         private System.Windows.Forms.ToolStripButton toolDpto;
         private System.Windows.Forms.Panel panelfechayhora;
         private System.Windows.Forms.Label hora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbTipo;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtCaracteristicas;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtNomuser;
+        private System.Windows.Forms.ComboBox cbnomdpto;
+
     }
 }

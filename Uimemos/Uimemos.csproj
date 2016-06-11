@@ -186,6 +186,12 @@
     <Compile Include="tecnico.Designer.cs">
       <DependentUpon>tecnico.cs</DependentUpon>
     </Compile>
+    <Compile Include="ultimaRev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ultimaRev.Designer.cs">
+      <DependentUpon>ultimaRev.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tecnico.resx">
       <DependentUpon>tecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ultimaRev.resx">
+      <DependentUpon>ultimaRev.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

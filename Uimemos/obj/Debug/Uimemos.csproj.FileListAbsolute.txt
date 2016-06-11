@@ -197,3 +197,7 @@ C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.Revision.r
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.tecnico.resources
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.csproj.GenerateResource.Cache
 C:\Users\KateF\Documents\GitHub\Memorandos3\Uimemos\obj\Debug\Uimemos.frmRlistado.resources
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Uimemos\bin\Debug\Uimemos.exe.config
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Uimemos\obj\Debug\Uimemos.exe
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Uimemos\obj\Debug\Uimemos.pdb
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Uimemos\obj\Debug\Uimemos.csprojResolveAssemblyReference.cache

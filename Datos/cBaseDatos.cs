@@ -20,7 +20,7 @@ namespace Datos
 
         private static SqlConnection ObtenerConexion()
         {
-            SqlConnection cnnConexion = new SqlConnection("Server=KATHERINE; Database=computacion;Trusted_Connection=True;");
+            SqlConnection cnnConexion = new SqlConnection("Server=SANDRA-PC; Database=computacion;Trusted_Connection=True;");
             cnnConexion.Open();
             return cnnConexion;
         }
@@ -317,13 +317,14 @@ namespace Datos
         public void ActualizarRevision(int nrevision, int codigocontrol, int coddpto, string Dinicial, string Dfinal, string recomendaciones, string status, string fechaI, string recibe, string fechaF)
         {
             SqlConnection ccnConexion = ObtenerConexion();
-            string strSentenciaSQL = "update revision set codigocontrol='{1}',coddpto='{2}',Dinicial='{3}',Dfinal='{4}',recomendaciones='{5}',status='{6}',fechaI='{7}',recibe='{8}',fechaF='{9}' where nrevision='{0}'";
-            strSentenciaSQL = string.Format(strSentenciaSQL, nrevision, codigocontrol, coddpto, Dinicial, Dfinal, recomendaciones, status, fechaI, recibe, fechaF);
+            string strSentenciaSQL = "update revision set Dinicial='{0}',Dfinal='{1}',recomendaciones='{2}',estatus='{3}',recibe='{4}',fechasalida='{5}' where nrevision={6}";
+            strSentenciaSQL = string.Format(strSentenciaSQL, Dinicial, Dfinal, recomendaciones, status, recibe, fechaF, nrevision);
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, ccnConexion);
             cmdComando.ExecuteNonQuery();
             ccnConexion.Close();
 
         }
+
 
 
         public void InsertarDispositivo(string tipo, int codigoControl, string caracteristicas, string usuario, int coddpto)
@@ -355,20 +356,30 @@ namespace Datos
 
         }
 
-        public void InsertarRevision(int nrevision, int codigocontrol, int coddpto, string Dinicial, string Dfinal, string recomendaciones, string status, string fechaI, string recibe, string fechaF)
+        public void InsertarRevision(int codigocontrol, int coddpto, string Dinicial, string Dfinal, string recomendaciones, string status, string fechaI, string recibe, string fechaF)
         {
             SqlConnection cnnConexion = ObtenerConexion();
 
-            string strSentenciaSQL = "insert into revision Values ('{0}','{1}',{2},'{3},'{4},'{5}','{6}','{7}','{8}','{9}')";
-            strSentenciaSQL = string.Format(strSentenciaSQL, nrevision, codigocontrol, coddpto, Dinicial, Dfinal, recomendaciones, status, fechaI, recibe);
-
+            string strSentenciaSQL = "insert into revision Values ({0},{1},'{2}','{3}','{4}','{5}','{6}','{7}','{8}')";
+            strSentenciaSQL = string.Format(strSentenciaSQL, codigocontrol, coddpto, Dinicial, Dfinal, recomendaciones, status, fechaI, recibe, fechaF);
             SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
 
             cmdComando.ExecuteNonQuery();
             cnnConexion.Close();
 
         }
+        public void InsertarControlRevisiones(int nrevision, string fecha, string pCedula)
+        {
+            SqlConnection cnnConexion = ObtenerConexion();
 
+            string strSentenciaSQL = "insert into controlrevisiones Values ({0},'{1}','{2}' )";
+            strSentenciaSQL = string.Format(strSentenciaSQL, nrevision, fecha, pCedula);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+
+            cmdComando.ExecuteNonQuery();
+            cnnConexion.Close();
+        }
         public DataSet ObtenerDispo(string txtuser)
         {
 
@@ -581,6 +592,29 @@ namespace Datos
             return dsConsulta;
 
         }
+        public DataSet BuscarDispo(int codigocontrol)
+        {
+
+            SqlConnection cnnConexion = ObtenerConexion();
+
+            string strSentenciaSQL = "SELECT disp.codigoControl,dep.codigodpto ,dep.nombre,rev.nrevision,rev.Dinicial,rev.Dfinal,rev.recomendaciones ,rev.estatus,rev.fecha,rev.recibe,rev.fechasalida FROM dispositivo disp INNER JOIN departamento dep ON disp.coddpto = dep.codigodpto LEFT JOIN revision rev ON disp.codigoControl = rev.codigocontrol WHERE disp.codigoControl = {0} ";
+            strSentenciaSQL = string.Format(strSentenciaSQL, codigocontrol);
+
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+
+
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+
+            DataSet dsConsulta = new DataSet();
+
+            adpAdapter.Fill(dsConsulta, "consulta");
+
+            cnnConexion.Close();
+
+            return dsConsulta;
+
+        }
+
 
         public DataSet ObtenerDispdptofiltro(string nombredpto)
         {
@@ -622,8 +656,22 @@ namespace Datos
             return dsConsulta;
 
         }
+        public DataSet ObtenerRev()
+        {
 
+            SqlConnection cnnConexion = ObtenerConexion();
+            string strSentenciaSQL = "SELECT TOP 5 nrevision as NúmeroRevisión, codigocontrol as CódigoControl, coddpto as CódigoDepartamento, Dinicial as DetalleInicial, Dfinal as DetalleFinal, recomendaciones as Recomendaciones, estatus as Estatus, fecha as Fecha, recibe as Recibe, fechasalida as FechaSalida FROM revision";
+            strSentenciaSQL = string.Format(strSentenciaSQL);
+            SqlCommand cmdComando = new SqlCommand(strSentenciaSQL, cnnConexion);
+            SqlDataAdapter adpAdapter = new SqlDataAdapter(cmdComando);
+            DataSet dsConsulta = new DataSet();
+            adpAdapter.Fill(dsConsulta, "consulta");
+            cnnConexion.Close();
+            return dsConsulta;
+
+        }
     }
+
 
 
 

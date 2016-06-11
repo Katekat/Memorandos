@@ -44,3 +44,8 @@ C:\Users\KateF\Documents\GitHub\Memorandos3\Datos\bin\Debug\Datos.dll
 C:\Users\KateF\Documents\GitHub\Memorandos3\Datos\bin\Debug\Datos.pdb
 C:\Users\KateF\Documents\GitHub\Memorandos3\Datos\obj\Debug\Datos.dll
 C:\Users\KateF\Documents\GitHub\Memorandos3\Datos\obj\Debug\Datos.pdb
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Datos\bin\Debug\Datos.dll
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Datos\bin\Debug\Datos.pdb
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Datos\obj\Debug\Datos.dll
+C:\Users\SANDRA\Documents\Visual Studio 2013\Projects\Prueba\Memorandos\Datos\obj\Debug\Datos.pdb

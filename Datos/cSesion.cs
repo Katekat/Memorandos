@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,35 +8,35 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-   public  class cSesion
+    public class cSesion
     {
-       public string usuario;
-       public string  pass;
+        public string usuario;
+        public string pass;
 
-       Datos.cBaseDatos servicio = new Datos.cBaseDatos();
-        
-       public cSesion validaruse(string usuario, string pass)
-       {
-           cSesion ss = new cSesion();
-           DataSet dsresultado = servicio.BuscarUsuario(usuario, pass);
+        Datos.cBaseDatos servicio = new Datos.cBaseDatos();
 
-           if (dsresultado.Tables[0].Rows.Count != 0)
-           {
+        public cSesion validaruse(string usuario, string pass)
+        {
+            cSesion ss = new cSesion();
+            DataSet dsresultado = servicio.BuscarUsuario(usuario, pass);
 
-               ss.usuario = dsresultado.Tables[0].Rows[0]["usuario"].ToString();
-               ss.pass = dsresultado.Tables[0].Rows[0]["pass"].ToString();
+            if (dsresultado.Tables[0].Rows.Count != 0)
+            {
 
-               return ss;
-           }
-           else
-           {
-               return ss;
-           }
-       }
-   
-   
-   
-   
-   
-   }
+                ss.usuario = dsresultado.Tables[0].Rows[0]["usuario"].ToString();
+                ss.pass = dsresultado.Tables[0].Rows[0]["pass"].ToString();
+
+                return ss;
+            }
+            else
+            {
+                return ss;
+            }
+        }
+
+
+
+
+
+    }
 }
